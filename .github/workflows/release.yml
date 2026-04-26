@@ -1,18 +1,142 @@
-name: Release
+name: Create Release
 
 on:
-  push:
-    tags: ['v*']
+  workflow_dispatch:
+    inputs:
+      release_notes:
+        description: 'Release notes (optional)'
+        required: false
+        default: ''
+        type: string
+
+permissions:
+  contents: write
+  actions: write
 
 jobs:
-  release:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - uses: actions/checkout@v4
+  backend-tests:
+    name: Backend Tests
+    uses: ./.github/workflows/backend-tests.yml
 
-      - name: Create Release
+  frontend-tests:
+    name: Frontend Tests
+    uses: ./.github/workflows/frontend-tests.yml
+
+  create-release:
+    name: Create Release
+    runs-on: ubuntu-latest
+    needs: [backend-tests, frontend-tests]
+
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+      tag: ${{ steps.version.outputs.tag }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Calculate next version
+        id: version
+        run: |
+          TODAY=$(date +%Y.%m.%d)
+
+          EXISTING_TAGS=$(git tag -l "${TODAY}.*" | sort -V)
+
+          if [ -z "$EXISTING_TAGS" ]; then
+            SEQUENCE="0001"
+          else
+            LAST_TAG=$(echo "$EXISTING_TAGS" | tail -1)
+            LAST_SEQUENCE=$(echo "$LAST_TAG" | sed "s/${TODAY}\.//" | sed 's/^0*//')
+
+            if [ -z "$LAST_SEQUENCE" ]; then
+              LAST_SEQUENCE=0
+            fi
+
+            NEXT_SEQUENCE=$((LAST_SEQUENCE + 1))
+            SEQUENCE=$(printf "%04d" $NEXT_SEQUENCE)
+          fi
+
+          VERSION="${TODAY}.${SEQUENCE}"
+
+          echo "version=${VERSION}" >> $GITHUB_OUTPUT
+          echo "tag=${VERSION}" >> $GITHUB_OUTPUT
+          echo "📦 Next version: ${VERSION}"
+
+      - name: Generate changelog
+        id: changelog
+        run: |
+          PREVIOUS_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
+
+          if [ -z "$PREVIOUS_TAG" ]; then
+            echo "No previous tag found, generating full changelog"
+            COMMITS=$(git log --oneline --no-merges | head -20)
+          else
+            echo "Previous tag: $PREVIOUS_TAG"
+            COMMITS=$(git log --oneline --no-merges ${PREVIOUS_TAG}..HEAD)
+          fi
+
+          CHANGELOG="## What's Changed\n\n"
+
+          if [ -n "$COMMITS" ]; then
+            while IFS= read -r line; do
+              CHANGELOG="${CHANGELOG}- ${line}\n"
+            done <<< "$COMMITS"
+          else
+            CHANGELOG="${CHANGELOG}- No changes since last release\n"
+          fi
+
+          if [ -n "${{ inputs.release_notes }}" ]; then
+            CHANGELOG="${CHANGELOG}\n## Release Notes\n\n${{ inputs.release_notes }}\n"
+          fi
+
+          CHANGELOG="${CHANGELOG}\n---\n**Full Changelog**: https://github.com/${{ github.repository }}/compare/${PREVIOUS_TAG}...${{ steps.version.outputs.tag }}"
+
+          echo -e "$CHANGELOG" > RELEASE_NOTES.md
+          cat RELEASE_NOTES.md
+
+      - name: Create Git tag
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git tag -a ${{ steps.version.outputs.tag }} -m "Release ${{ steps.version.outputs.tag }}"
+          git push origin ${{ steps.version.outputs.tag }}
+
+      - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          generate_release_notes: true
+          tag_name: ${{ steps.version.outputs.tag }}
+          name: Release ${{ steps.version.outputs.tag }}
+          body_path: RELEASE_NOTES.md
+          draft: false
+          prerelease: false
+          generate_release_notes: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate summary
+        run: |
+          echo "## 🚀 Release Created Successfully" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Version:** \`${{ steps.version.outputs.tag }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "**Commit:** [\`${{ github.sha }}\`](${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }})" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Next Steps" >> $GITHUB_STEP_SUMMARY
+          echo "The Docker Build workflow will automatically trigger and:" >> $GITHUB_STEP_SUMMARY
+          echo "1. Build the Docker image" >> $GITHUB_STEP_SUMMARY
+          echo "2. Push to GitHub Container Registry" >> $GITHUB_STEP_SUMMARY
+          echo "3. Tag with version \`${{ steps.version.outputs.tag }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "[View Release](${{ github.server_url }}/${{ github.repository }}/releases/tag/${{ steps.version.outputs.tag }})" >> $GITHUB_STEP_SUMMARY
+
+  deploy:
+    name: Build and Deploy Docker Image
+    needs: create-release
+    permissions:
+      contents: read
+      packages: write
+    uses: ./.github/workflows/docker-build-push.yml
+    with:
+      release_version: ${{ needs.create-release.outputs.tag }}
+    secrets: inherit

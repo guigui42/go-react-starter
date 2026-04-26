@@ -3,7 +3,12 @@ name: Docker Build & Push
 on:
   push:
     branches: [main]
-    tags: ['v*']
+  workflow_call:
+    inputs:
+      release_version:
+        description: 'Release version tag'
+        required: false
+        type: string
 
 jobs:
   build:
@@ -25,14 +30,22 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Determine tags
+        id: tags
+        run: |
+          TAGS="ghcr.io/${{ github.repository }}:latest"
+          TAGS="${TAGS},ghcr.io/${{ github.repository }}:${{ github.sha }}"
+          if [ -n "${{ inputs.release_version }}" ]; then
+            TAGS="${TAGS},ghcr.io/${{ github.repository }}:${{ inputs.release_version }}"
+          fi
+          echo "tags=${TAGS}" >> $GITHUB_OUTPUT
+
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
           context: .
           file: docker/Dockerfile
           push: true
-          tags: |
-            ghcr.io/${{ github.repository }}:latest
-            ghcr.io/${{ github.repository }}:${{ github.sha }}
+          tags: ${{ steps.tags.outputs.tags }}
           cache-from: type=gha
           cache-to: type=gha,mode=max

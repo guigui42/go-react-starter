@@ -41,7 +41,8 @@ help:
 	@echo "  make db-init          - Start DB and wait for readiness"
 	@echo ""
 	@echo "$(BLUE)Other:$(NC)"
-	@echo "  make release VERSION=v1.0.0 - Create and push a release tag"
+	@echo "  make release          - Create a new release (triggers Docker build)"
+	@echo "  make release NOTES='text' - Create a release with custom notes"
 	@echo "  make clean            - Remove build artifacts"
 	@echo ""
 
@@ -184,16 +185,15 @@ db-reset:
 	@$(MAKE) db-wait
 	@echo "$(GREEN)✓ PostgreSQL reset complete$(NC)"
 
-VERSION ?=
+NOTES ?=
 release:
-	@if [ -z "$(VERSION)" ]; then \
-		echo "$(RED)Usage: make release VERSION=v1.0.0$(NC)"; \
-		exit 1; \
+	@echo "$(GREEN)Creating new release...$(NC)"
+	@if [ -z "$(NOTES)" ]; then \
+		gh workflow run release.yml; \
+	else \
+		gh workflow run release.yml -f release_notes="$(NOTES)"; \
 	fi
-	@echo "$(GREEN)Creating release $(VERSION)...$(NC)"
-	@git tag -a $(VERSION) -m "Release $(VERSION)"
-	@git push origin $(VERSION)
-	@echo "$(GREEN)✓ Tag $(VERSION) pushed — GitHub Actions will create the release$(NC)"
+	@echo "$(GREEN)✓ Release workflow triggered$(NC)"
 
 clean:
 	@echo "$(YELLOW)Cleaning build artifacts...$(NC)"
