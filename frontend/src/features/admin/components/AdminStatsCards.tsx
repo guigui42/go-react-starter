@@ -6,7 +6,7 @@
 
 import type { AdminStats } from '@/features/admin/types'
 import { Group, Paper, SimpleGrid, Skeleton, Stack, Text, ThemeIcon } from '@mantine/core'
-import { IconUsers } from '@tabler/icons-react'
+import { IconFileText, IconUsers } from '@tabler/icons-react'
 
 interface AdminStatsCardsProps {
   stats?: AdminStats
@@ -70,6 +70,12 @@ export function AdminStatsCards({ stats, isLoading }: AdminStatsCardsProps) {
         value={stats.total_users}
         icon={<IconUsers size={24} />}
         color="blue"
+      />
+      <StatCard
+        label="Total Notes"
+        value={stats.total_notes}
+        icon={<IconFileText size={24} />}
+        color="teal"
       />
     </SimpleGrid>
   )

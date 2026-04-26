@@ -5,6 +5,7 @@
 
 export interface AdminStats {
   total_users: number
+  total_notes: number
 }
 
 export interface AdminUser {
@@ -13,6 +14,7 @@ export interface AdminUser {
   is_admin: boolean
   is_test_user: boolean
   email_verified: boolean
+  note_count: number
   created_at: string
   last_login_at?: string
   last_login_ip?: string

@@ -34,8 +34,6 @@ const EVENT_CATEGORY_COLORS: Record<string, string> = {
   auth: 'blue',
   user: 'violet',
   admin: 'orange',
-  broker: 'teal',
-  import: 'cyan',
 }
 
 const EVENT_TYPE_OPTIONS = [
@@ -49,9 +47,7 @@ const EVENT_TYPE_OPTIONS = [
   { value: 'auth.password', label: 'Password' },
   { value: 'auth.email', label: 'Email verification' },
   { value: 'user.', label: 'User management' },
-  { value: 'broker.', label: 'Broker' },
   { value: 'admin.', label: 'Admin actions' },
-  { value: 'import.', label: 'Import' },
 ]
 
 const STATUS_OPTIONS = [

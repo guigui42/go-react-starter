@@ -101,9 +101,7 @@ export function UserList({ users, isLoading }: UserListProps) {
                   <Table.Th>Email</Table.Th>
                   <Table.Th>Role</Table.Th>
                   <Table.Th ta="center">Verified</Table.Th>
-                  <Table.Th ta="center">Brokers</Table.Th>
-                  <Table.Th ta="center">Trades</Table.Th>
-                  <Table.Th ta="center">Dividends</Table.Th>
+                  <Table.Th ta="center">Notes</Table.Th>
                   <Table.Th>Last Login</Table.Th>
                   <Table.Th>Last IP</Table.Th>
                   <Table.Th>Registered</Table.Th>
@@ -112,7 +110,7 @@ export function UserList({ users, isLoading }: UserListProps) {
               <Table.Tbody>
                 {filteredUsers.length === 0 ? (
                   <Table.Tr>
-                    <Table.Td colSpan={9}>
+                    <Table.Td colSpan={7}>
                       <Text c="dimmed" ta="center" py="md">
                         {search ? 'No users found matching search' : 'No users registered'}
                       </Text>
@@ -171,13 +169,7 @@ export function UserList({ users, isLoading }: UserListProps) {
                         )}
                       </Table.Td>
                       <Table.Td ta="center">
-                        <Text size="sm">{user.broker_count}</Text>
-                      </Table.Td>
-                      <Table.Td ta="center">
-                        <Text size="sm">{user.trade_count}</Text>
-                      </Table.Td>
-                      <Table.Td ta="center">
-                        <Text size="sm">{user.dividend_count}</Text>
+                        <Text size="sm">{user.note_count}</Text>
                       </Table.Td>
                       <Table.Td>
                         <Text size="sm" c="dimmed">
