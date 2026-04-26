@@ -1,4 +1,4 @@
-import { useNotes, useDeleteNote } from '../hooks/useNotes'
+import { useNotes, useDeleteNote } from '@/features/notes/hooks/useNotes'
 import { NoteCard } from './NoteCard'
 import { Button, Center, Loader, SimpleGrid, Stack, Text } from '@mantine/core'
 import { notifications } from '@mantine/notifications'

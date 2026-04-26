@@ -1,4 +1,4 @@
-import type { Note } from '../types/note'
+import type { Note } from '@/features/notes/types/note'
 import { ActionIcon, Card, Group, Text, Title } from '@mantine/core'
 import { IconEdit, IconTrash } from '@tabler/icons-react'
 import { Link } from '@tanstack/react-router'

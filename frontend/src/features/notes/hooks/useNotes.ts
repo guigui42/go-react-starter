@@ -2,7 +2,7 @@ import { apiRequest, API_PREFIX } from '@/lib/api'
 import { queryKeys } from '@/lib/queryKeys'
 import { useAuth } from '@/contexts/AuthContext'
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
-import type { CreateNoteRequest, Note, NoteListResponse, UpdateNoteRequest } from '../types/note'
+import type { CreateNoteRequest, Note, NoteListResponse, UpdateNoteRequest } from '@/features/notes/types/note'
 
 export function useNotes() {
   const { user } = useAuth()

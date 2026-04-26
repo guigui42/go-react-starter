@@ -1,5 +1,5 @@
-import { useCreateNote, useUpdateNote } from '../hooks/useNotes'
-import type { Note } from '../types/note'
+import { useCreateNote, useUpdateNote } from '@/features/notes/hooks/useNotes'
+import type { Note } from '@/features/notes/types/note'
 import { Button, Group, Paper, Stack, Textarea, TextInput } from '@mantine/core'
 import { useForm } from '@mantine/form'
 import { notifications } from '@mantine/notifications'
