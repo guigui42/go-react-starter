@@ -32,16 +32,16 @@ describe('Footer', () => {
     expect(screen.getByText(new RegExp(`© ${year}`))).toBeInTheDocument()
   })
 
-  it('should display the Guigui Factory company name', () => {
+  it('should display the company name', () => {
     renderWithProviders(<Footer />)
     
-    expect(screen.getByText(/Guigui Factory/)).toBeInTheDocument()
+    expect(screen.getByText(/Go React Starter/)).toBeInTheDocument()
   })
 
   it('should have a link to privacy policy', () => {
     renderWithProviders(<Footer />)
     
-    const privacyLink = screen.getByRole('link', { name: /privacy policy/i })
+    const privacyLink = screen.getByRole('link', { name: /privacy/i })
     expect(privacyLink).toBeInTheDocument()
     expect(privacyLink).toHaveAttribute('href', '/privacy')
   })
@@ -49,7 +49,7 @@ describe('Footer', () => {
   it('should have a link to terms of service', () => {
     renderWithProviders(<Footer />)
     
-    const termsLink = screen.getByRole('link', { name: /terms of service/i })
+    const termsLink = screen.getByRole('link', { name: /terms/i })
     expect(termsLink).toBeInTheDocument()
     expect(termsLink).toHaveAttribute('href', '/terms')
   })
@@ -57,7 +57,7 @@ describe('Footer', () => {
   it('should have a link to legal notice', () => {
     renderWithProviders(<Footer />)
     
-    const legalLink = screen.getByRole('link', { name: /legal notice/i })
+    const legalLink = screen.getByRole('link', { name: /legal/i })
     expect(legalLink).toBeInTheDocument()
     expect(legalLink).toHaveAttribute('href', '/legal')
   })
@@ -65,10 +65,9 @@ describe('Footer', () => {
   it('should be accessible via keyboard', async () => {
     renderWithProviders(<Footer />)
     
-    // Links should be focusable
-    const privacyLink = screen.getByRole('link', { name: /privacy policy/i })
-    const termsLink = screen.getByRole('link', { name: /terms of service/i })
-    const legalLink = screen.getByRole('link', { name: /legal notice/i })
+    const privacyLink = screen.getByRole('link', { name: /privacy/i })
+    const termsLink = screen.getByRole('link', { name: /terms/i })
+    const legalLink = screen.getByRole('link', { name: /legal/i })
     
     expect(privacyLink).not.toHaveAttribute('tabindex', '-1')
     expect(termsLink).not.toHaveAttribute('tabindex', '-1')
@@ -78,11 +77,9 @@ describe('Footer', () => {
   it('should have proper semantic structure', () => {
     renderWithProviders(<Footer />)
     
-    // Should have footer role
     const footer = screen.getByRole('contentinfo')
     expect(footer).toBeInTheDocument()
     
-    // Should have navigation within footer
     const nav = screen.getByRole('navigation', { name: /footer/i })
     expect(nav).toBeInTheDocument()
   })
