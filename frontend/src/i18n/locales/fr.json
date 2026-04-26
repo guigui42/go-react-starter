@@ -55,20 +55,156 @@
     "dismiss": "Fermer"
   },
   "auth": {
-    "login": "Se connecter",
-    "register": "Créer un compte",
-    "logout": "Se déconnecter",
+    "login": "Connexion",
+    "logout": "Déconnexion",
+    "register": "S'inscrire",
     "email": "Email",
     "password": "Mot de passe",
     "confirmPassword": "Confirmer le mot de passe",
-    "forgotPassword": "Mot de passe oublié ?",
-    "noAccount": "Pas encore de compte ?",
-    "haveAccount": "Vous avez déjà un compte ?",
     "loginSuccess": "Connexion réussie",
+    "loginError": "Identifiants invalides",
     "registerSuccess": "Compte créé avec succès",
-    "logoutSuccess": "Déconnexion réussie",
-    "invalidCredentials": "Email ou mot de passe incorrect",
-    "passwordRequirements": "Le mot de passe doit contenir au moins 8 caractères"
+    "registerError": "L'inscription a échoué. Veuillez réessayer.",
+    "emailRequired": "L'email est requis",
+    "emailInvalid": "Format d'email invalide",
+    "passwordRequired": "Le mot de passe est requis",
+    "passwordMin": "Le mot de passe doit contenir au moins 12 caractères",
+    "passwordMax": "Le mot de passe ne doit pas dépasser 72 caractères",
+    "passwordCommon": "Le mot de passe est trop commun, veuillez en choisir un plus fort",
+    "passwordContainsEmail": "Le mot de passe ne peut pas contenir votre adresse email",
+    "passwordMismatch": "Les mots de passe ne correspondent pas",
+    "noAccount": "Vous n'avez pas de compte ?",
+    "haveAccount": "Vous avez déjà un compte ?",
+    "passkey": {
+      "not_supported_title": "Clés d'Accès Non Supportées",
+      "not_supported_message": "Votre navigateur ne supporte pas les clés d'accès. Veuillez utiliser un navigateur moderne comme Chrome, Safari ou Edge.",
+      "errors": {
+        "not_supported": "Votre navigateur ne supporte pas les clés d'accès",
+        "registration_failed": "Échec de la création de la clé d'accès. Veuillez réessayer.",
+        "authentication_failed": "Échec de l'authentification. Veuillez réessayer.",
+        "load_failed": "Échec du chargement des clés d'accès",
+        "delete_failed": "Échec de la suppression de la clé d'accès"
+      },
+      "registration": {
+        "modal_title": "Ajouter une Nouvelle Clé d'Accès",
+        "description": "Créez une clé d'accès pour vous connecter en toute sécurité avec la biométrie de votre appareil ou une clé de sécurité.",
+        "friendly_name_label": "Nom de l'Appareil (Optionnel)",
+        "friendly_name_placeholder": "ex: iPhone 15 Pro",
+        "friendly_name_description": "Donnez un nom à cette clé d'accès pour l'identifier plus tard",
+        "create_button": "Créer une Clé d'Accès"
+      },
+      "authentication": {
+        "description": "Utilisez la biométrie de votre appareil ou une clé de sécurité pour vous connecter en toute sécurité.",
+        "sign_in_button": "Se Connecter avec une Clé d'Accès",
+        "use_backup_code": "Utiliser un Code de Secours"
+      },
+      "management": {
+        "title": "Clés d'Accès",
+        "description": "Gérez vos clés d'accès pour une authentification sécurisée et sans mot de passe",
+        "add_button": "Ajouter une Clé",
+        "add_first": "Ajoutez Votre Première Clé",
+        "no_credentials": "Vous n'avez pas encore de clés d'accès. Ajoutez-en une pour activer l'authentification sécurisée sans mot de passe.",
+        "unnamed_device": "Appareil Sans Nom",
+        "created": "Créé le",
+        "last_used": "Dernière utilisation",
+        "synced": "Synchronisé",
+        "platform": "Cet Appareil",
+        "cross_platform": "Clé de Sécurité",
+        "delete_credential": "Supprimer la clé d'accès",
+        "delete_confirm_title": "Supprimer la Clé d'Accès ?",
+        "delete_confirm_message": "Êtes-vous sûr de vouloir supprimer cette clé d'accès ? Vous ne pourrez plus l'utiliser pour vous connecter."
+      },
+      "migration": {
+        "title": "Passez à l'Authentification par Clé d'Accès",
+        "description": "Passez à l'authentification sans mot de passe pour plus de sécurité et de commodité. Connectez-vous avec votre empreinte digitale, votre visage ou une clé de sécurité.",
+        "upgrade_button": "Configurer une Clé d'Accès",
+        "dismiss_button": "Plus Tard"
+      }
+    },
+    "backup_codes": {
+      "warning_title": "Important : Enregistrez Ces Codes",
+      "warning_message": "Ces codes de secours vous permettent de vous connecter si vous perdez l'accès à votre clé d'accès. Chaque code ne peut être utilisé qu'une seule fois.",
+      "save_instruction": "Enregistrez ces codes dans un endroit sécurisé :",
+      "copy_all": "Cliquez pour copier tous les codes",
+      "copied_all": "Tous les codes copiés !",
+      "storage_suggestion": "Stockez ces codes dans un gestionnaire de mots de passe ou imprimez-les et conservez-les dans un endroit sûr.",
+      "auth": {
+        "title": "Se Connecter avec un Code de Secours",
+        "description": "Entrez l'un de vos codes de secours pour vous connecter. Chaque code ne peut être utilisé qu'une seule fois.",
+        "code_label": "Code de Secours",
+        "submit_button": "Se Connecter",
+        "empty_code": "Veuillez entrer un code de secours",
+        "invalid_code": "Code de secours invalide ou déjà utilisé",
+        "failed": "Échec de l'authentification. Veuillez réessayer.",
+        "warning": "Après avoir utilisé un code de secours, vous aurez un code de moins disponible. Envisagez de configurer une nouvelle clé d'accès après vous être connecté."
+      }
+    },
+    "continue": "Continuer",
+    "checkingAccount": "Vérification de votre compte...",
+    "changeEmail": "Changer d'email",
+    "signingInAs": "Connexion en tant que {{email}}",
+    "cantUsePasskey": "Impossible d'utiliser votre clé d'accès ?",
+    "tryPasskeyInstead": "Essayer la clé d'accès à la place",
+    "loginWithPasskey": "Se Connecter avec une Clé d'Accès",
+    "loginWithPassword": "Se Connecter avec un Mot de Passe",
+    "backToPasskey": "Retour à la Connexion par Clé d'Accès",
+    "passkeyLoginError": "Échec de la connexion avec la clé d'accès",
+    "passkeyNotSupported": "Les clés d'accès ne sont pas prises en charge dans ce navigateur. Veuillez utiliser un navigateur moderne comme Chrome, Safari ou Edge.",
+    "pleaseUsePasswordOrRegisterPasskey": "Veuillez utiliser la connexion par mot de passe ou enregistrer une clé d'accès d'abord.",
+    "registerWithPasskey": "S'inscrire avec une Clé d'Accès",
+    "registerWithPasskeyDesc": "Utilisez la biométrie de votre appareil pour une authentification sécurisée sans mot de passe",
+    "registerWithPasskeyButton": "Créer un Compte avec une Clé d'Accès",
+    "recommended": "Recommandé",
+    "useThis": "Utiliser",
+    "preferPassword": "Préférez utiliser un mot de passe ?",
+    "preferPasskey": "Utiliser une clé d'accès",
+    "passkeyDeviceName": "Nom de l'Appareil (Optionnel)",
+    "passkeyDeviceNamePlaceholder": "ex. Mon iPhone",
+    "passkeyDeviceNameDesc": "Aidez à identifier cet appareil lors de la connexion",
+    "oauth": {
+      "continueWith": "Continuer avec {{provider}}",
+      "linkAccount": "Lier un autre compte",
+      "noLinkedAccounts": "Aucun compte lié",
+      "unlink": "Délier {{provider}}",
+      "unlinkButton": "Délier",
+      "cannotUnlinkLast": "Vous ne pouvez pas délier votre dernière méthode d'authentification. Ajoutez d'abord un mot de passe ou une clé d'accès.",
+      "processing": "Traitement...",
+      "success": "Succès !",
+      "failed": "Échec de l'Authentification",
+      "completingLogin": "Finalisation de votre connexion...",
+      "redirectingToDashboard": "Redirection vers le tableau de bord...",
+      "redirectingToLogin": "Redirection vers la connexion...",
+      "errorTitle": "Impossible de se Connecter",
+      "genericError": "Une erreur s'est produite lors de l'authentification. Veuillez réessayer.",
+      "errors": {
+        "invalid_provider": "Le fournisseur de connexion sélectionné n'est pas disponible. Veuillez essayer une autre méthode.",
+        "missing_code": "Aucun code d'autorisation n'a été reçu. Veuillez réessayer de vous connecter.",
+        "invalid_state": "Votre session de connexion est invalide. Veuillez réessayer.",
+        "state_expired": "Votre session de connexion a expiré. Veuillez réessayer.",
+        "email_required": "Une adresse e-mail est requise depuis votre compte. Veuillez vous assurer que votre e-mail est public ou vérifié.",
+        "exchange_failed": "Échec de l'authentification avec le fournisseur. Veuillez réessayer.",
+        "not_implemented": "Cette méthode de connexion n'est pas encore disponible. Veuillez essayer une autre méthode.",
+        "already_linked": "Ce compte est déjà lié à un autre utilisateur.",
+        "auth_failed": "Échec de l'authentification. Veuillez réessayer.",
+        "token_failed": "Échec de la finalisation de la connexion. Veuillez réessayer."
+      },
+      "accountCreated": "Compte Créé",
+      "accountCreatedMessage": "Votre compte a été créé avec succès.",
+      "loginSuccess": "Bienvenue",
+      "loginSuccessMessage": "Vous êtes maintenant connecté.",
+      "management": {
+        "title": "Comptes Connectés",
+        "description": "Gérez vos comptes sociaux connectés pour une connexion facile.",
+        "linkedAccounts": "Comptes Liés",
+        "linkNew": "Lier un Nouveau Compte",
+        "noLinkedYet": "Vous n'avez pas encore lié de comptes sociaux. Liez-en un pour une connexion plus rapide.",
+        "unlinkSuccess": "Compte Délié",
+        "unlinkSuccessMessage": "{{provider}} a été délié de votre compte.",
+        "unlinkError": "Impossible de délier le compte. Veuillez réessayer.",
+        "unlinkErrorTitle": "Échec du Déliage"
+      }
+    },
+    "emailPlaceholder": "you@example.com"
   },
   "nav": {
     "home": "Accueil",
@@ -126,41 +262,358 @@
     "deleteSuccess": "Note supprimée avec succès"
   },
   "passkey": {
-    "title": "Clés d'accès",
-    "description": "Connectez-vous en toute sécurité sans mot de passe grâce à la biométrie ou aux clés de sécurité.",
-    "register": "Enregistrer une clé",
-    "authenticate": "Se connecter avec une clé",
-    "manage": "Gérer les clés",
-    "noPasskeys": "Aucune clé enregistrée",
-    "registerSuccess": "Clé enregistrée avec succès",
-    "deleteSuccess": "Clé supprimée avec succès",
-    "name": "Nom de la clé",
-    "lastUsed": "Dernière utilisation",
-    "createdAt": "Créée le"
+    "not_supported_title": "Clés d'accès non supportées",
+    "not_supported_message": "Votre navigateur ne supporte pas les clés d'accès. Veuillez utiliser un navigateur moderne comme Chrome, Safari ou Edge.",
+    "errors": {
+      "not_supported": "Votre navigateur ne supporte pas les clés d'accès",
+      "registration_failed": "Échec de la création de la clé d'accès. Veuillez réessayer.",
+      "authentication_failed": "Échec de l'authentification. Veuillez réessayer.",
+      "load_failed": "Échec du chargement des clés d'accès",
+      "delete_failed": "Échec de la suppression de la clé d'accès"
+    },
+    "management": {
+      "title": "Clés d'accès",
+      "description": "Gérez vos clés d'accès pour une authentification sécurisée et sans mot de passe",
+      "add_button": "Ajouter une clé",
+      "add_first": "Ajoutez votre première clé",
+      "no_credentials": "Vous n'avez pas encore de clés d'accès. Ajoutez-en une pour activer l'authentification sécurisée sans mot de passe.",
+      "unnamed_device": "Appareil sans nom",
+      "created": "Créé le",
+      "last_used": "Dernière utilisation",
+      "synced": "Synchronisé",
+      "platform": "Cet appareil",
+      "cross_platform": "Clé de sécurité",
+      "delete_credential": "Supprimer la clé d'accès",
+      "delete_confirm_title": "Supprimer la clé d'accès ?",
+      "delete_confirm_message": "Êtes-vous sûr de vouloir supprimer cette clé d'accès ? Vous ne pourrez plus l'utiliser pour vous connecter."
+    },
+    "registration": {
+      "modal_title": "Ajouter une nouvelle clé d'accès",
+      "description": "Créez une clé d'accès pour vous connecter en toute sécurité avec la biométrie de votre appareil ou une clé de sécurité.",
+      "friendly_name_label": "Nom de l'appareil (Optionnel)",
+      "friendly_name_placeholder": "ex. iPhone 15 Pro",
+      "friendly_name_description": "Donnez un nom à cette clé d'accès pour l'identifier plus tard",
+      "create_button": "Créer une clé d'accès"
+    },
+    "authentication": {
+      "description": "Utilisez la biométrie de votre appareil ou une clé de sécurité pour vous connecter en toute sécurité.",
+      "sign_in_button": "Se connecter avec une clé d'accès",
+      "use_backup_code": "Utiliser un code de secours"
+    },
+    "migration": {
+      "title": "Passez à l'authentification par clé d'accès",
+      "description": "Passez à l'authentification sans mot de passe pour plus de sécurité et de commodité. Connectez-vous avec votre empreinte digitale, votre visage ou une clé de sécurité.",
+      "upgrade_button": "Configurer une clé d'accès",
+      "dismiss_button": "Plus tard"
+    }
   },
   "backup_codes": {
-    "title": "Codes de secours",
-    "description": "Utilisez les codes de secours pour vous connecter si vous perdez l'accès à votre clé.",
-    "generate": "Générer des codes",
-    "regenerate": "Régénérer les codes",
-    "warning": "Conservez ces codes en lieu sûr. Chaque code ne peut être utilisé qu'une seule fois.",
-    "remaining": "{{count}} codes restants"
+    "warning_title": "Important : Enregistrez ces codes",
+    "warning_message": "Ces codes de secours vous permettent de vous connecter si vous perdez l'accès à votre clé d'accès. Chaque code ne peut être utilisé qu'une seule fois.",
+    "save_instruction": "Enregistrez ces codes dans un endroit sécurisé :",
+    "copy_all": "Cliquez pour copier tous les codes",
+    "copied_all": "Tous les codes copiés !",
+    "storage_suggestion": "Stockez ces codes dans un gestionnaire de mots de passe ou imprimez-les et conservez-les dans un endroit sûr.",
+    "auth": {
+      "title": "Se connecter avec un code de secours",
+      "description": "Entrez l'un de vos codes de secours pour vous connecter. Chaque code ne peut être utilisé qu'une seule fois.",
+      "code_label": "Code de secours",
+      "submit_button": "Se connecter",
+      "empty_code": "Veuillez entrer un code de secours",
+      "invalid_code": "Code de secours invalide ou déjà utilisé",
+      "failed": "Échec de l'authentification. Veuillez réessayer.",
+      "warning": "Après avoir utilisé un code de secours, vous aurez un code de moins disponible. Envisagez de configurer une nouvelle clé d'accès après vous être connecté."
+    }
   },
   "emailVerification": {
-    "title": "Vérifiez votre email",
-    "description": "Veuillez vérifier votre email pour le lien de vérification.",
-    "resend": "Renvoyer l'email de vérification",
-    "resendSuccess": "Email de vérification envoyé",
-    "verified": "Email vérifié avec succès"
+    "checkYourEmail": "Vérifiez Votre Email",
+    "sentTo": "Nous avons envoyé un lien de vérification à {{email}}",
+    "yourEmail": "votre adresse email",
+    "checkSpam": "Si vous ne voyez pas l'email, vérifiez votre dossier spam.",
+    "resend": "Renvoyer l'Email de Vérification",
+    "resendIn": "Renvoyer dans {{seconds}}s",
+    "resendSuccess": "Email de vérification envoyé ! Veuillez vérifier votre boîte de réception.",
+    "resendError": "Échec de l'envoi de l'email de vérification. Veuillez réessayer.",
+    "linkExpires": "Le lien de vérification expire dans 24 heures.",
+    "verifying": "Vérification de votre email...",
+    "verified": "Email Vérifié !",
+    "verifiedMessage": "Votre email a été vérifié avec succès. Vous pouvez maintenant vous connecter à votre compte.",
+    "continueToLogin": "Continuer vers la Connexion",
+    "verificationFailed": "Échec de la Vérification",
+    "noToken": "Aucun jeton de vérification fourni.",
+    "invalidToken": "Jeton de vérification invalide. Veuillez en demander un nouveau.",
+    "tokenExpired": "Ce lien de vérification a expiré. Veuillez en demander un nouveau.",
+    "alreadyVerified": "Cet email a déjà été vérifié.",
+    "verifyError": "Une erreur s'est produite lors de la vérification de votre email. Veuillez réessayer.",
+    "tryAgainHint": "Vous pouvez demander un nouvel email de vérification depuis la page de connexion.",
+    "backToLogin": "Retour à la Connexion",
+    "notVerifiedError": "Veuillez vérifier votre adresse email avant de vous connecter."
   },
   "pwa": {
     "updateAvailable": "Mise à jour disponible",
-    "updateMessage": "Une nouvelle version est disponible. Rechargez pour obtenir les dernières fonctionnalités.",
-    "reload": "Recharger"
+    "updateMessage": "Une nouvelle version de Go React Starter est disponible. Rechargez pour obtenir les dernières fonctionnalités et corrections.",
+    "reload": "Recharger maintenant"
   },
   "legal": {
-    "privacy": "Politique de confidentialité",
-    "terms": "Conditions d'utilisation",
-    "legal": "Mentions légales"
+    "privacy": {
+      "title": "Politique de Confidentialité",
+      "lastUpdated": "Dernière mise à jour : {{date}}",
+      "introduction": "Go React Starter s'engage à protéger votre vie privée et à assurer la sécurité de vos données personnelles. Cette Politique de Confidentialité explique comment nous collectons, utilisons et protégeons vos informations conformément au Règlement Général sur la Protection des Données (RGPD) et aux lois applicables en matière de protection des données.",
+      "dataController": {
+        "title": "Responsable du Traitement",
+        "name": "Nom",
+        "contact": "Contact"
+      },
+      "dataCollected": {
+        "title": "Données Collectées",
+        "intro": "Nous collectons et traitons les catégories de données personnelles suivantes :",
+        "email": "Adresse email (pour l'identification du compte et la communication)",
+        "password": "Mot de passe haché (utilisant le chiffrement bcrypt pour la sécurité)",
+        "preferences": "Préférences utilisateur (langue, devise, pays, paramètres fiscaux)",
+        "brokerAccounts": "Informations sur les comptes courtiers (nom, numéro de compte, type de compte)",
+        "tradeData": "Données de transactions (symboles d'actions, quantités, prix, dates, frais)",
+        "webauthn": "Identifiants WebAuthn (clés d'accès pour une sécurité renforcée)",
+        "backupCodes": "Codes de secours (hachés pour la récupération de compte)"
+      },
+      "purposes": {
+        "title": "Finalité du Traitement des Données",
+        "intro": "Nous traitons vos données personnelles aux fins suivantes :",
+        "portfolio": "Suivi de portefeuille et gestion des investissements",
+        "tax": "Calculs fiscaux et déclarations (à titre informatif uniquement)",
+        "auth": "Authentification des utilisateurs et sécurité des comptes",
+        "services": "Fourniture et amélioration de nos services"
+      },
+      "legalBasis": {
+        "title": "Base Légale du Traitement",
+        "intro": "Nous traitons vos données sur la base de :",
+        "contract": "Exécution du contrat :",
+        "contractDesc": "Le traitement est nécessaire pour fournir les services que vous avez demandés dans le cadre de votre accord d'utilisation avec Go React Starter",
+        "legitimateInterest": "Intérêt légitime :",
+        "legitimateInterestDesc": "Nous avons un intérêt légitime à mettre en œuvre des mesures de sécurité pour protéger votre compte et vos données"
+      },
+      "hosting": {
+        "title": "Hébergement et Services Tiers",
+        "hostingLabel": "Hébergement",
+        "azure": "Microsoft Azure, région France :",
+        "azureDesc": "Toutes les données utilisateur sont stockées au sein de l'Union européenne, garantissant la conformité avec la résidence des données dans l'UE",
+        "thirdPartyLabel": "Services Tiers",
+        "eodhd": "EODHD (basé aux États-Unis) :",
+        "eodhdDesc": "Nous utilisons ce service pour récupérer les données de cours boursiers. Seuls les symboles d'actions sont envoyés à ce service — aucune donnée personnelle n'est transmise",
+        "cloudflare": "Cloudflare :",
+        "cloudflareDesc": "Nous utilisons Cloudflare pour la distribution de contenu et la protection DDoS. Cloudflare est conforme au RGPD et opère selon les normes européennes de protection des données",
+        "umami": "Umami Analytics :",
+        "umamiDesc": "Nous utilisons Umami pour des analyses de site web respectueuses de la vie privée et sans cookies. Umami ne collecte pas de données personnelles, n'utilise pas de cookies et est entièrement conforme au RGPD"
+      },
+      "retention": {
+        "title": "Conservation des Données",
+        "content": "Nous conservons vos données personnelles tant que votre compte reste actif. Vous pouvez demander la suppression de votre compte et de toutes les données associées à tout moment en nous contactant à {{email}}. Dès réception d'une demande de suppression, nous supprimerons définitivement vos données de nos systèmes."
+      },
+      "rights": {
+        "title": "Vos Droits au titre du RGPD",
+        "intro": "En vertu des articles 15 à 22 du RGPD, vous disposez des droits suivants concernant vos données personnelles :",
+        "access": "Droit d'accès :",
+        "accessDesc": "Vous pouvez demander une copie des données personnelles que nous détenons à votre sujet",
+        "rectification": "Droit de rectification :",
+        "rectificationDesc": "Vous pouvez demander la correction de données personnelles inexactes ou incomplètes",
+        "erasure": "Droit à l'effacement :",
+        "erasureDesc": "Vous pouvez demander la suppression de vos données personnelles (suppression du compte)",
+        "portability": "Droit à la portabilité des données :",
+        "portabilityDesc": "Vous pouvez demander vos données dans un format portable pour les transférer à un autre service",
+        "object": "Droit d'opposition :",
+        "objectDesc": "Vous pouvez vous opposer au traitement de vos données personnelles",
+        "restriction": "Droit à la limitation du traitement :",
+        "restrictionDesc": "Vous pouvez demander que nous limitions l'utilisation de vos données",
+        "complaint": "Droit d'introduire une réclamation :",
+        "complaintDesc": "Vous avez le droit d'introduire une réclamation auprès de la Commission Nationale de l'Informatique et des Libertés (CNIL), l'autorité française de protection des données"
+      },
+      "security": {
+        "title": "Sécurité des Données",
+        "intro": "Nous mettons en œuvre des mesures de sécurité conformes aux standards de l'industrie pour protéger vos données personnelles, notamment :",
+        "encryption": "Chiffrement des données sensibles (mots de passe, codes de secours)",
+        "https": "Connexions HTTPS sécurisées pour toute transmission de données",
+        "audits": "Audits de sécurité et mises à jour réguliers",
+        "accessControls": "Contrôles d'accès et mesures d'authentification"
+      },
+      "contact": {
+        "title": "Nous Contacter",
+        "content": "Pour toute question, préoccupation ou demande concernant vos données personnelles ou cette Politique de Confidentialité, veuillez nous contacter à :",
+        "responseTime": "Nous répondrons à votre demande dans un délai de 30 jours conformément aux exigences du RGPD."
+      }
+    },
+    "terms": {
+      "title": "Conditions Générales d'Utilisation",
+      "effectiveDate": "Date d'entrée en vigueur : {{date}}",
+      "lastUpdated": "Dernière mise à jour : {{date}}",
+      "disclaimers": {
+        "financial": {
+          "title": "Avertissement Financier",
+          "bold": "Go React Starter N'EST PAS un conseiller financier, N'EST PAS un conseil en investissement, et N'EST PAS une plateforme de courtage ou de trading.",
+          "content": "Toutes les informations fournies par Go React Starter sont uniquement à des fins éducatives et informatives. Vous devez consulter des professionnels financiers qualifiés avant de prendre toute décision d'investissement."
+        },
+        "tax": {
+          "title": "Avertissement Fiscal",
+          "bold": "Les calculs fiscaux fournis sont des ESTIMATIONS uniquement et NE constituent PAS un conseil fiscal officiel.",
+          "content": "Vous DEVEZ vérifier toutes les informations fiscales auprès d'un professionnel fiscal qualifié ou d'un expert-comptable. Guigui Factory n'est pas responsable des erreurs dans les calculs fiscaux. Vous êtes responsable de l'exactitude de toutes les données que vous saisissez dans Go React Starter."
+        }
+      },
+      "sections": {
+        "serviceDescription": {
+          "title": "1. Description du Service",
+          "intro": "Go React Starter est un outil de suivi d'investissements en portefeuille conçu pour aider les utilisateurs à :",
+          "centralize": "Centraliser les données d'investissement provenant de plusieurs courtiers",
+          "track": "Suivre la performance et les positions du portefeuille",
+          "tax": "Obtenir des fonctionnalités d'estimation fiscale spécifiquement pour les investisseurs français"
+        },
+        "accountResponsibilities": {
+          "title": "2. Responsabilités du Compte",
+          "intro": "En créant un compte, vous acceptez de :",
+          "accurate": "Fournir des informations exactes et complètes",
+          "security": "Maintenir la sécurité de vos identifiants de compte",
+          "age": "Avoir au moins 18 ans ou disposer du consentement parental",
+          "oneAccount": "Ne maintenir qu'un seul compte par personne",
+          "notify": "Nous informer immédiatement de tout accès non autorisé à votre compte"
+        },
+        "acceptableUse": {
+          "title": "3. Utilisation Acceptable",
+          "agreeIntro": "Vous acceptez d'utiliser Go React Starter uniquement pour :",
+          "personal": "Des fins personnelles et non commerciales",
+          "lawful": "Des activités légales conformes aux lois applicables",
+          "notIntro": "Vous acceptez de NE PAS :",
+          "scraping": "Utiliser le scraping automatisé, les bots ou l'accès API non autorisé",
+          "unauthorized": "Tenter d'obtenir un accès non autorisé à nos systèmes",
+          "illegal": "Utiliser le service pour des activités illégales",
+          "interfere": "Interférer avec ou perturber le service ou les serveurs"
+        },
+        "freeTier": {
+          "title": "4. Conditions de l'Offre Gratuite",
+          "content": "Go React Starter est actuellement fourni gratuitement. Nous nous réservons le droit d'introduire des niveaux d'abonnement payants à l'avenir. Si nous le faisons, nous informerons les utilisateurs existants à l'avance, et la poursuite de l'utilisation du service constituera une acceptation des nouvelles conditions tarifaires."
+        },
+        "liability": {
+          "title": "5. Limitation de Responsabilité",
+          "intro": "Go React Starter est fourni « EN L'ÉTAT » sans garantie d'aucune sorte, expresse ou implicite, y compris mais sans s'y limiter :",
+          "merchantability": "Les garanties de qualité marchande ou d'adéquation à un usage particulier",
+          "accuracy": "L'exactitude, la fiabilité ou l'exhaustivité des informations",
+          "availability": "La disponibilité du service sans interruption ni erreur",
+          "damages": "Guigui Factory et Go React Starter ne sauraient être tenus responsables de tout dommage direct, indirect, accessoire, spécial, consécutif ou punitif, y compris mais sans s'y limiter les pertes financières, le manque à gagner ou la perte de données résultant de votre utilisation ou de votre incapacité à utiliser le service."
+        },
+        "dataAccuracy": {
+          "title": "6. Exactitude des Données",
+          "content": "Vous êtes seul responsable de l'exactitude et de l'exhaustivité de toutes les données que vous saisissez dans Go React Starter. Bien que nous nous efforcions de fournir des calculs et des informations précis, nous ne garantissons pas l'exactitude des valorisations de portefeuille, des indicateurs de performance ou des estimations fiscales."
+        },
+        "thirdParty": {
+          "title": "7. Services Tiers",
+          "content": "Go React Starter peut s'intégrer à des services tiers (tels que des plateformes de courtage ou des fournisseurs de données de marché). Nous ne sommes pas responsables de la disponibilité, de l'exactitude ou des pratiques de ces services tiers. Votre utilisation de ces services est soumise à leurs conditions d'utilisation et politiques de confidentialité respectives."
+        },
+        "modifications": {
+          "title": "8. Modifications et Résiliation du Service",
+          "content": "Nous nous réservons le droit de modifier, suspendre ou interrompre tout aspect de Go React Starter à tout moment, avec ou sans préavis. Nous pouvons également résilier ou suspendre votre compte pour violation de ces conditions ou pour toute autre raison à notre seule discrétion."
+        },
+        "governingLaw": {
+          "title": "9. Droit Applicable et Juridiction",
+          "content": "Les présentes Conditions Générales d'Utilisation sont régies et interprétées conformément aux lois françaises, sans tenir compte de ses dispositions en matière de conflit de lois. Tout litige découlant de ces conditions ou de votre utilisation de Go React Starter sera soumis à la compétence exclusive des tribunaux français."
+        },
+        "changes": {
+          "title": "10. Modifications des Conditions",
+          "content": "Nous nous réservons le droit de mettre à jour ces Conditions Générales d'Utilisation à tout moment. Nous informerons les utilisateurs des modifications importantes par email ou via le service. La poursuite de l'utilisation de Go React Starter après ces modifications constitue une acceptation des conditions mises à jour."
+        },
+        "contact": {
+          "title": "11. Informations de Contact",
+          "content": "Si vous avez des questions concernant ces Conditions Générales d'Utilisation, veuillez nous contacter via nos canaux de support ou visitez"
+        }
+      }
+    },
+    "notice": {
+      "title": "Mentions Légales",
+      "lastUpdated": "Dernière mise à jour : {{date}}",
+      "publisher": {
+        "title": "Éditeur",
+        "name": "Nom",
+        "legalForm": "Forme juridique",
+        "address": "Adresse",
+        "email": "Email",
+        "website": "Site web"
+      },
+      "hosting": {
+        "title": "Hébergeur",
+        "provider": "Fournisseur",
+        "region": "Région",
+        "address": "Adresse"
+      },
+      "intellectualProperty": {
+        "title": "Propriété Intellectuelle",
+        "content": "Tout le contenu de ce site web, y compris mais sans s'y limiter les textes, graphiques, logos, icônes, images et logiciels, est la propriété de Guigui Factory ou de ses fournisseurs de contenu et est protégé par les lois internationales sur le droit d'auteur. La compilation de tout le contenu de ce site est la propriété exclusive de Guigui Factory.",
+        "trademarks": "Go React Starter et le logo Go React Starter sont des marques déposées de Guigui Factory. Toutes les autres marques mentionnées sont la propriété de leurs propriétaires respectifs."
+      },
+      "liability": {
+        "title": "Limitation de Responsabilité",
+        "content": "Les informations fournies sur ce site web sont uniquement à des fins d'information générale. Bien que nous nous efforcions de maintenir les informations exactes et à jour, nous ne faisons aucune déclaration ou garantie d'aucune sorte, expresse ou implicite, concernant l'exhaustivité, l'exactitude, la fiabilité, l'adéquation ou la disponibilité du site web ou des informations, produits, services ou graphiques connexes contenus sur le site web."
+      },
+      "links": {
+        "title": "Liens Externes",
+        "content": "Ce site web peut contenir des liens vers des sites web externes. Nous n'avons aucun contrôle sur le contenu et la nature de ces sites et ne sommes pas responsables de leur contenu ou de leurs pratiques en matière de confidentialité."
+      },
+      "applicableLaw": {
+        "title": "Droit Applicable",
+        "content": "Ces mentions légales sont régies par le droit français. Tout litige découlant de l'utilisation de ce site web sera soumis à la compétence exclusive des tribunaux français."
+      },
+      "contact": {
+        "title": "Contact",
+        "content": "Pour toute question concernant ces mentions légales, veuillez nous contacter à :"
+      }
+    },
+    "footer": {
+      "copyright": "© {{year}} Guigui Factory. Tous droits réservés.",
+      "privacyPolicy": "Politique de Confidentialité",
+      "termsOfService": "Conditions Générales d'Utilisation",
+      "legalNotice": "Mentions Légales",
+      "madeWith": "Fait avec",
+      "inFrance": "en France"
+    },
+    "legalNotice": {
+      "title": "Mentions Légales",
+      "effectiveDate": "Date d'entrée en vigueur : 1er janvier 2026",
+      "intro": "Conformément à la loi française (Loi pour la Confiance dans l'Économie Numérique - LCEN), cette page fournit les informations légalement requises concernant Go React Starter.",
+      "publisher": {
+        "title": "Informations sur l'Éditeur",
+        "name": "Nom",
+        "nameValue": "Guigui Factory",
+        "status": "Statut",
+        "statusValue": "Projet personnel (future entreprise)",
+        "contact": "Contact"
+      },
+      "director": {
+        "title": "Directeur de la publication",
+        "value": "Guigui Factory"
+      },
+      "hosting": {
+        "title": "Hébergeur",
+        "provider": "Hébergeur",
+        "providerValue": "Microsoft Azure",
+        "address": "Adresse",
+        "addressValue": "Microsoft France, 39 quai du Président Roosevelt, 92130 Issy-les-Moulineaux, France",
+        "region": "Région",
+        "regionValue": "France Central"
+      },
+      "ip": {
+        "title": "Propriété Intellectuelle",
+        "copyright": "Tous les contenus, designs et code © 2025 Guigui Factory",
+        "trademarks": "Les marques et logos sont la propriété de leurs détenteurs respectifs."
+      },
+      "personalData": {
+        "title": "Données Personnelles & Confidentialité",
+        "intro": "Pour des informations sur la collecte, l'utilisation et la protection de vos données personnelles, veuillez consulter notre",
+        "privacyLink": "Politique de Confidentialité",
+        "cnil": "Go React Starter est conforme au Règlement Général sur la Protection des Données (RGPD) et aux lois françaises sur la protection des données appliquées par la Commission Nationale de l'Informatique et des Libertés (CNIL)."
+      },
+      "cookies": {
+        "title": "Cookies",
+        "essential": "Cookies essentiels uniquement (authentification, session utilisateur)",
+        "analytics": "Analyses Cloudflare (sans cookie, respectueuses de la vie privée)"
+      },
+      "contact": {
+        "title": "Nous Contacter",
+        "text": "Pour toute question ou demande, veuillez nous contacter à :"
+      }
+    }
   }
 }

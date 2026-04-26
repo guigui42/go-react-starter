@@ -55,20 +55,156 @@
     "dismiss": "Dismiss"
   },
   "auth": {
-    "login": "Sign In",
-    "register": "Create Account",
-    "logout": "Sign Out",
+    "login": "Login",
+    "logout": "Logout",
+    "register": "Register",
     "email": "Email",
     "password": "Password",
     "confirmPassword": "Confirm Password",
-    "forgotPassword": "Forgot password?",
+    "loginSuccess": "Successfully logged in",
+    "loginError": "Invalid credentials",
+    "registerSuccess": "Account created successfully",
+    "registerError": "Registration failed. Please try again.",
+    "emailRequired": "Email is required",
+    "emailInvalid": "Invalid email format",
+    "passwordRequired": "Password is required",
+    "passwordMin": "Password must be at least 12 characters",
+    "passwordMax": "Password must not exceed 72 characters",
+    "passwordCommon": "Password is too common, please choose a stronger one",
+    "passwordContainsEmail": "Password cannot contain your email address",
+    "passwordMismatch": "Passwords do not match",
     "noAccount": "Don't have an account?",
     "haveAccount": "Already have an account?",
-    "loginSuccess": "Successfully signed in",
-    "registerSuccess": "Account created successfully",
-    "logoutSuccess": "Successfully signed out",
-    "invalidCredentials": "Invalid email or password",
-    "passwordRequirements": "Password must be at least 8 characters"
+    "passkey": {
+      "not_supported_title": "Passkeys Not Supported",
+      "not_supported_message": "Your browser does not support passkeys. Please use a modern browser like Chrome, Safari, or Edge.",
+      "errors": {
+        "not_supported": "Your browser does not support passkeys",
+        "registration_failed": "Failed to create passkey. Please try again.",
+        "authentication_failed": "Authentication failed. Please try again.",
+        "load_failed": "Failed to load passkeys",
+        "delete_failed": "Failed to delete passkey"
+      },
+      "registration": {
+        "modal_title": "Add New Passkey",
+        "description": "Create a passkey to sign in securely with your device's biometrics or security key.",
+        "friendly_name_label": "Device Name (Optional)",
+        "friendly_name_placeholder": "e.g., iPhone 15 Pro",
+        "friendly_name_description": "Give this passkey a name to identify it later",
+        "create_button": "Create Passkey"
+      },
+      "authentication": {
+        "description": "Use your device's biometrics or security key to sign in securely.",
+        "sign_in_button": "Sign In with Passkey",
+        "use_backup_code": "Use Backup Code Instead"
+      },
+      "management": {
+        "title": "Passkeys",
+        "description": "Manage your passkeys for secure, passwordless authentication",
+        "add_button": "Add Passkey",
+        "add_first": "Add Your First Passkey",
+        "no_credentials": "You don't have any passkeys yet. Add one to enable secure, passwordless authentication.",
+        "unnamed_device": "Unnamed Device",
+        "created": "Created",
+        "last_used": "Last used",
+        "synced": "Synced",
+        "platform": "This Device",
+        "cross_platform": "Security Key",
+        "delete_credential": "Delete passkey",
+        "delete_confirm_title": "Delete Passkey?",
+        "delete_confirm_message": "Are you sure you want to delete this passkey? You won't be able to use it to sign in anymore."
+      },
+      "migration": {
+        "title": "Upgrade to Passkey Authentication",
+        "description": "Switch to passwordless authentication for better security and convenience. Sign in with your fingerprint, face, or security key.",
+        "upgrade_button": "Set Up Passkey",
+        "dismiss_button": "Maybe Later"
+      }
+    },
+    "backup_codes": {
+      "warning_title": "Important: Save These Codes",
+      "warning_message": "These backup codes allow you to sign in if you lose access to your passkey. Each code can only be used once.",
+      "save_instruction": "Save these codes in a secure location:",
+      "copy_all": "Click to copy all codes",
+      "copied_all": "All codes copied!",
+      "storage_suggestion": "Store these codes in a password manager or print them and keep them somewhere safe.",
+      "auth": {
+        "title": "Sign In with Backup Code",
+        "description": "Enter one of your backup codes to sign in. Each code can only be used once.",
+        "code_label": "Backup Code",
+        "submit_button": "Sign In",
+        "empty_code": "Please enter a backup code",
+        "invalid_code": "Invalid or already used backup code",
+        "failed": "Authentication failed. Please try again.",
+        "warning": "After using a backup code, you'll have one less code available. Consider setting up a new passkey after signing in."
+      }
+    },
+    "continue": "Continue",
+    "checkingAccount": "Checking your account...",
+    "changeEmail": "Change email",
+    "signingInAs": "Signing in as {{email}}",
+    "cantUsePasskey": "Can't use your passkey?",
+    "tryPasskeyInstead": "Try passkey instead",
+    "loginWithPasskey": "Sign In with Passkey",
+    "loginWithPassword": "Sign In with Password",
+    "backToPasskey": "Back to Passkey Sign In",
+    "passkeyLoginError": "Failed to sign in with passkey",
+    "passkeyNotSupported": "Passkeys are not supported in this browser. Please use a modern browser like Chrome, Safari, or Edge.",
+    "pleaseUsePasswordOrRegisterPasskey": "Please use password login or register a passkey first.",
+    "registerWithPasskey": "Register with Passkey",
+    "registerWithPasskeyDesc": "Use your device biometrics for secure, passwordless authentication",
+    "registerWithPasskeyButton": "Create Account with Passkey",
+    "recommended": "Recommended",
+    "useThis": "Use this",
+    "preferPassword": "Prefer to use a password instead?",
+    "preferPasskey": "Use passkey instead",
+    "passkeyDeviceName": "Device Name (Optional)",
+    "passkeyDeviceNamePlaceholder": "e.g., My iPhone",
+    "passkeyDeviceNameDesc": "Help identify this device when signing in",
+    "oauth": {
+      "continueWith": "Continue with {{provider}}",
+      "linkAccount": "Link another account",
+      "noLinkedAccounts": "No linked accounts",
+      "unlink": "Unlink {{provider}}",
+      "unlinkButton": "Unlink",
+      "cannotUnlinkLast": "You cannot unlink your last authentication method. Please add a password or passkey first.",
+      "processing": "Processing...",
+      "success": "Success!",
+      "failed": "Authentication Failed",
+      "completingLogin": "Completing your login...",
+      "redirectingToDashboard": "Redirecting to dashboard...",
+      "redirectingToLogin": "Redirecting to login...",
+      "errorTitle": "Unable to Sign In",
+      "genericError": "Something went wrong during authentication. Please try again.",
+      "errors": {
+        "invalid_provider": "The selected sign-in provider is not available. Please try another method.",
+        "missing_code": "No authorization code was received. Please try signing in again.",
+        "invalid_state": "Your sign-in session is invalid. Please try again.",
+        "state_expired": "Your sign-in session has expired. Please try again.",
+        "email_required": "An email address is required from your account. Please ensure your email is public or verified.",
+        "exchange_failed": "Failed to authenticate with the provider. Please try again.",
+        "not_implemented": "This sign-in method is not yet available. Please try another method.",
+        "already_linked": "This account is already linked to another user.",
+        "auth_failed": "Authentication failed. Please try again.",
+        "token_failed": "Failed to complete sign-in. Please try again."
+      },
+      "accountCreated": "Account Created",
+      "accountCreatedMessage": "Your account has been created successfully.",
+      "loginSuccess": "Welcome Back",
+      "loginSuccessMessage": "You have been signed in successfully.",
+      "management": {
+        "title": "Connected Accounts",
+        "description": "Manage your connected social accounts for easy sign-in.",
+        "linkedAccounts": "Linked Accounts",
+        "linkNew": "Link New Account",
+        "noLinkedYet": "You haven't linked any social accounts yet. Link one for faster sign-in.",
+        "unlinkSuccess": "Account Unlinked",
+        "unlinkSuccessMessage": "{{provider}} has been unlinked from your account.",
+        "unlinkError": "Failed to unlink account. Please try again.",
+        "unlinkErrorTitle": "Unlink Failed"
+      }
+    },
+    "emailPlaceholder": "you@example.com"
   },
   "nav": {
     "home": "Home",
@@ -126,41 +262,358 @@
     "deleteSuccess": "Note deleted successfully"
   },
   "passkey": {
-    "title": "Passkeys",
-    "description": "Sign in securely without a password using biometrics or security keys.",
-    "register": "Register Passkey",
-    "authenticate": "Sign in with Passkey",
-    "manage": "Manage Passkeys",
-    "noPasskeys": "No passkeys registered",
-    "registerSuccess": "Passkey registered successfully",
-    "deleteSuccess": "Passkey removed successfully",
-    "name": "Passkey Name",
-    "lastUsed": "Last used",
-    "createdAt": "Created"
+    "not_supported_title": "Passkeys Not Supported",
+    "not_supported_message": "Your browser does not support passkeys. Please use a modern browser like Chrome, Safari, or Edge.",
+    "errors": {
+      "not_supported": "Your browser does not support passkeys",
+      "registration_failed": "Failed to create passkey. Please try again.",
+      "authentication_failed": "Authentication failed. Please try again.",
+      "load_failed": "Failed to load passkeys",
+      "delete_failed": "Failed to delete passkey"
+    },
+    "management": {
+      "title": "Passkeys",
+      "description": "Manage your passkeys for secure, passwordless authentication",
+      "add_button": "Add Passkey",
+      "add_first": "Add Your First Passkey",
+      "no_credentials": "You don't have any passkeys yet. Add one to enable secure, passwordless authentication.",
+      "unnamed_device": "Unnamed Device",
+      "created": "Created",
+      "last_used": "Last used",
+      "synced": "Synced",
+      "platform": "This Device",
+      "cross_platform": "Security Key",
+      "delete_credential": "Delete passkey",
+      "delete_confirm_title": "Delete Passkey?",
+      "delete_confirm_message": "Are you sure you want to delete this passkey? You won't be able to use it to sign in anymore."
+    },
+    "registration": {
+      "modal_title": "Add New Passkey",
+      "description": "Create a passkey to sign in securely with your device's biometrics or security key.",
+      "friendly_name_label": "Device Name (Optional)",
+      "friendly_name_placeholder": "e.g., iPhone 15 Pro",
+      "friendly_name_description": "Give this passkey a name to identify it later",
+      "create_button": "Create Passkey"
+    },
+    "authentication": {
+      "description": "Use your device's biometrics or security key to sign in securely.",
+      "sign_in_button": "Sign In with Passkey",
+      "use_backup_code": "Use Backup Code Instead"
+    },
+    "migration": {
+      "title": "Upgrade to Passkey Authentication",
+      "description": "Switch to passwordless authentication for better security and convenience. Sign in with your fingerprint, face, or security key.",
+      "upgrade_button": "Set Up Passkey",
+      "dismiss_button": "Maybe Later"
+    }
   },
   "backup_codes": {
-    "title": "Backup Codes",
-    "description": "Use backup codes to sign in if you lose access to your passkey.",
-    "generate": "Generate Backup Codes",
-    "regenerate": "Regenerate Codes",
-    "warning": "Store these codes in a safe place. Each code can only be used once.",
-    "remaining": "{{count}} codes remaining"
+    "warning_title": "Important: Save These Codes",
+    "warning_message": "These backup codes allow you to sign in if you lose access to your passkey. Each code can only be used once.",
+    "save_instruction": "Save these codes in a secure location:",
+    "copy_all": "Click to copy all codes",
+    "copied_all": "All codes copied!",
+    "storage_suggestion": "Store these codes in a password manager or print them and keep them somewhere safe.",
+    "auth": {
+      "title": "Sign In with Backup Code",
+      "description": "Enter one of your backup codes to sign in. Each code can only be used once.",
+      "code_label": "Backup Code",
+      "submit_button": "Sign In",
+      "empty_code": "Please enter a backup code",
+      "invalid_code": "Invalid or already used backup code",
+      "failed": "Authentication failed. Please try again.",
+      "warning": "After using a backup code, you'll have one less code available. Consider setting up a new passkey after signing in."
+    }
   },
   "emailVerification": {
-    "title": "Verify Your Email",
-    "description": "Please check your email for a verification link.",
-    "resend": "Resend verification email",
-    "resendSuccess": "Verification email sent",
-    "verified": "Email verified successfully"
+    "checkYourEmail": "Check Your Email",
+    "sentTo": "We've sent a verification link to {{email}}",
+    "yourEmail": "your email address",
+    "checkSpam": "If you don't see the email, check your spam folder.",
+    "resend": "Resend Verification Email",
+    "resendIn": "Resend in {{seconds}}s",
+    "resendSuccess": "Verification email sent! Please check your inbox.",
+    "resendError": "Failed to resend verification email. Please try again.",
+    "linkExpires": "The verification link expires in 24 hours.",
+    "verifying": "Verifying your email...",
+    "verified": "Email Verified!",
+    "verifiedMessage": "Your email has been successfully verified. You can now log in to your account.",
+    "continueToLogin": "Continue to Login",
+    "verificationFailed": "Verification Failed",
+    "noToken": "No verification token provided.",
+    "invalidToken": "Invalid verification token. Please request a new one.",
+    "tokenExpired": "This verification link has expired. Please request a new one.",
+    "alreadyVerified": "This email has already been verified.",
+    "verifyError": "An error occurred while verifying your email. Please try again.",
+    "tryAgainHint": "You can request a new verification email from the login page.",
+    "backToLogin": "Back to Login",
+    "notVerifiedError": "Please verify your email address before logging in."
   },
   "pwa": {
     "updateAvailable": "Update Available",
-    "updateMessage": "A new version is available. Reload to get the latest features and fixes.",
+    "updateMessage": "A new version of Go React Starter is available. Reload to get the latest features and fixes.",
     "reload": "Reload Now"
   },
   "legal": {
-    "privacy": "Privacy Policy",
-    "terms": "Terms of Service",
-    "legal": "Legal Notice"
+    "privacy": {
+      "title": "Privacy Policy",
+      "lastUpdated": "Last updated: {{date}}",
+      "introduction": "Go React Starter is committed to protecting your privacy and ensuring the security of your personal data. This Privacy Policy explains how we collect, use, and safeguard your information in compliance with the General Data Protection Regulation (GDPR) and applicable data protection laws.",
+      "dataController": {
+        "title": "Data Controller",
+        "name": "Name",
+        "contact": "Contact"
+      },
+      "dataCollected": {
+        "title": "Data We Collect",
+        "intro": "We collect and process the following categories of personal data:",
+        "email": "Email address (for account identification and communication)",
+        "password": "Hashed password (using bcrypt encryption for security)",
+        "preferences": "User preferences (language, currency, country, tax settings)",
+        "brokerAccounts": "Broker account information (name, account number, account type)",
+        "tradeData": "Trade data (stock symbols, quantities, prices, dates, fees)",
+        "webauthn": "WebAuthn credentials (passkeys for enhanced security)",
+        "backupCodes": "Backup codes (hashed for account recovery)"
+      },
+      "purposes": {
+        "title": "Purpose of Data Processing",
+        "intro": "We process your personal data for the following purposes:",
+        "portfolio": "Portfolio tracking and investment management",
+        "tax": "Tax calculations and reporting (informational purposes only)",
+        "auth": "User authentication and account security",
+        "services": "Providing and improving our services"
+      },
+      "legalBasis": {
+        "title": "Legal Basis for Processing",
+        "intro": "We process your data based on:",
+        "contract": "Contract performance:",
+        "contractDesc": "Processing is necessary to provide the services you have requested through your user agreement with Go React Starter",
+        "legitimateInterest": "Legitimate interest:",
+        "legitimateInterestDesc": "We have a legitimate interest in implementing security measures to protect your account and data"
+      },
+      "hosting": {
+        "title": "Hosting and Third-Party Services",
+        "hostingLabel": "Hosting",
+        "azure": "Microsoft Azure, France region:",
+        "azureDesc": "All user data is stored within the European Union, ensuring EU data residency compliance",
+        "thirdPartyLabel": "Third-Party Services",
+        "eodhd": "EODHD (US-based):",
+        "eodhdDesc": "We use this service to retrieve stock price data. Only stock symbols are sent to this service—no personal data is transmitted",
+        "cloudflare": "Cloudflare:",
+        "cloudflareDesc": "We use Cloudflare for content delivery and DDoS protection. Cloudflare is GDPR-compliant and operates within EU data protection standards",
+        "umami": "Umami Analytics:",
+        "umamiDesc": "We use Umami for privacy-focused, cookieless website analytics. Umami does not collect personal data, does not use cookies, and is fully GDPR-compliant"
+      },
+      "retention": {
+        "title": "Data Retention",
+        "content": "We retain your personal data for as long as your account remains active. You may request deletion of your account and all associated data at any time by contacting us at {{email}}. Upon receipt of a deletion request, we will permanently delete your data from our systems."
+      },
+      "rights": {
+        "title": "Your Rights Under GDPR",
+        "intro": "Under Articles 15-22 of the GDPR, you have the following rights regarding your personal data:",
+        "access": "Right to access:",
+        "accessDesc": "You can request a copy of the personal data we hold about you",
+        "rectification": "Right to rectification:",
+        "rectificationDesc": "You can request correction of inaccurate or incomplete personal data",
+        "erasure": "Right to erasure:",
+        "erasureDesc": "You can request deletion of your personal data (account deletion)",
+        "portability": "Right to data portability:",
+        "portabilityDesc": "You can request your data in a portable format to transfer to another service",
+        "object": "Right to object:",
+        "objectDesc": "You can object to the processing of your personal data",
+        "restriction": "Right to restriction of processing:",
+        "restrictionDesc": "You can request that we limit how we use your data",
+        "complaint": "Right to lodge a complaint:",
+        "complaintDesc": "You have the right to lodge a complaint with the Commission Nationale de l'Informatique et des Libertés (CNIL), the French Data Protection Authority"
+      },
+      "security": {
+        "title": "Data Security",
+        "intro": "We implement industry-standard security measures to protect your personal data, including:",
+        "encryption": "Encryption of sensitive data (passwords, backup codes)",
+        "https": "Secure HTTPS connections for all data transmission",
+        "audits": "Regular security audits and updates",
+        "accessControls": "Access controls and authentication measures"
+      },
+      "contact": {
+        "title": "Contact Us",
+        "content": "For any questions, concerns, or requests regarding your personal data or this Privacy Policy, please contact us at:",
+        "responseTime": "We will respond to your request within 30 days as required by GDPR regulations."
+      }
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "effectiveDate": "Effective Date: {{date}}",
+      "lastUpdated": "Last updated: {{date}}",
+      "disclaimers": {
+        "financial": {
+          "title": "Financial Disclaimer",
+          "bold": "Go React Starter is NOT a financial advisor, NOT investment advice, and NOT a broker or trading platform.",
+          "content": "All information provided by Go React Starter is for educational and informational purposes only. You should consult with qualified financial professionals before making any investment decisions."
+        },
+        "tax": {
+          "title": "Tax Disclaimer",
+          "bold": "Tax calculations provided are ESTIMATES only and NOT official tax advice.",
+          "content": "You MUST verify all tax-related information with a qualified tax professional or accountant. Guigui Factory is not liable for any errors in tax calculations. You are responsible for the accuracy of all data you enter into Go React Starter."
+        }
+      },
+      "sections": {
+        "serviceDescription": {
+          "title": "1. Service Description",
+          "intro": "Go React Starter is a portfolio investment tracking tool designed to help users:",
+          "centralize": "Centralize investment data from multiple brokers",
+          "track": "Track portfolio performance and positions",
+          "tax": "Obtain tax estimation features specifically for French investors"
+        },
+        "accountResponsibilities": {
+          "title": "2. Account Responsibilities",
+          "intro": "By creating an account, you agree to:",
+          "accurate": "Provide accurate and complete information",
+          "security": "Maintain the security of your account credentials",
+          "age": "Be at least 18 years of age or have parental consent",
+          "oneAccount": "Maintain only one account per person",
+          "notify": "Notify us immediately of any unauthorized access to your account"
+        },
+        "acceptableUse": {
+          "title": "3. Acceptable Use",
+          "agreeIntro": "You agree to use Go React Starter only for:",
+          "personal": "Personal, non-commercial purposes",
+          "lawful": "Lawful activities in compliance with applicable laws",
+          "notIntro": "You agree NOT to:",
+          "scraping": "Use automated scraping, bots, or unauthorized API access",
+          "unauthorized": "Attempt to gain unauthorized access to our systems",
+          "illegal": "Use the service for any illegal activities",
+          "interfere": "Interfere with or disrupt the service or servers"
+        },
+        "freeTier": {
+          "title": "4. Free Tier Terms",
+          "content": "Go React Starter is currently provided free of charge. We reserve the right to introduce paid subscription tiers in the future. If we do so, we will provide advance notice to existing users, and continued use of the service will constitute acceptance of any new pricing terms."
+        },
+        "liability": {
+          "title": "5. Limitation of Liability",
+          "intro": "Go React Starter is provided \"AS IS\" without warranties of any kind, either express or implied, including but not limited to:",
+          "merchantability": "Warranties of merchantability or fitness for a particular purpose",
+          "accuracy": "Accuracy, reliability, or completeness of information",
+          "availability": "Uninterrupted or error-free service availability",
+          "damages": "Guigui Factory and Go React Starter shall not be liable for any direct, indirect, incidental, special, consequential, or punitive damages, including but not limited to financial losses, lost profits, or loss of data arising from your use of or inability to use the service."
+        },
+        "dataAccuracy": {
+          "title": "6. Data Accuracy",
+          "content": "You are solely responsible for the accuracy and completeness of all data you enter into Go React Starter. While we strive to provide accurate calculations and information, we make no guarantees regarding the accuracy of portfolio valuations, performance metrics, or tax estimates."
+        },
+        "thirdParty": {
+          "title": "7. Third-Party Services",
+          "content": "Go React Starter may integrate with third-party services (such as broker platforms or market data providers). We are not responsible for the availability, accuracy, or practices of these third-party services. Your use of such services is subject to their respective terms of service and privacy policies."
+        },
+        "modifications": {
+          "title": "8. Service Modifications and Termination",
+          "content": "We reserve the right to modify, suspend, or discontinue any aspect of Go React Starter at any time, with or without notice. We may also terminate or suspend your account for violation of these terms or for any other reason at our sole discretion."
+        },
+        "governingLaw": {
+          "title": "9. Governing Law and Jurisdiction",
+          "content": "These Terms of Service shall be governed by and construed in accordance with the laws of France, without regard to its conflict of law provisions. Any disputes arising from these terms or your use of Go React Starter shall be subject to the exclusive jurisdiction of the French courts."
+        },
+        "changes": {
+          "title": "10. Changes to Terms",
+          "content": "We reserve the right to update these Terms of Service at any time. We will notify users of material changes via email or through the service. Continued use of Go React Starter after such changes constitutes acceptance of the updated terms."
+        },
+        "contact": {
+          "title": "11. Contact Information",
+          "content": "If you have any questions about these Terms of Service, please contact us through our support channels or visit"
+        }
+      }
+    },
+    "notice": {
+      "title": "Legal Notice",
+      "lastUpdated": "Last updated: {{date}}",
+      "publisher": {
+        "title": "Publisher",
+        "name": "Name",
+        "legalForm": "Legal Form",
+        "address": "Address",
+        "email": "Email",
+        "website": "Website"
+      },
+      "hosting": {
+        "title": "Hosting Provider",
+        "provider": "Provider",
+        "region": "Region",
+        "address": "Address"
+      },
+      "intellectualProperty": {
+        "title": "Intellectual Property",
+        "content": "All content on this website, including but not limited to text, graphics, logos, icons, images, and software, is the property of Guigui Factory or its content suppliers and is protected by international copyright laws. The compilation of all content on this site is the exclusive property of Guigui Factory.",
+        "trademarks": "Go React Starter and the Go React Starter logo are trademarks of Guigui Factory. All other trademarks referenced herein are the property of their respective owners."
+      },
+      "liability": {
+        "title": "Limitation of Liability",
+        "content": "The information provided on this website is for general informational purposes only. While we strive to keep the information accurate and up to date, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability of the website or the information, products, services, or related graphics contained on the website."
+      },
+      "links": {
+        "title": "External Links",
+        "content": "This website may contain links to external websites. We have no control over the content and nature of these sites and are not responsible for their content or privacy practices."
+      },
+      "applicableLaw": {
+        "title": "Applicable Law",
+        "content": "This legal notice is governed by French law. Any disputes arising from the use of this website shall be subject to the exclusive jurisdiction of the French courts."
+      },
+      "contact": {
+        "title": "Contact",
+        "content": "For any questions regarding this legal notice, please contact us at:"
+      }
+    },
+    "footer": {
+      "copyright": "© {{year}} Guigui Factory. All rights reserved.",
+      "privacyPolicy": "Privacy Policy",
+      "termsOfService": "Terms of Service",
+      "legalNotice": "Legal Notice",
+      "madeWith": "Made with",
+      "inFrance": "in France"
+    },
+    "legalNotice": {
+      "title": "Legal Notice",
+      "effectiveDate": "Effective Date: January 1, 2026",
+      "intro": "In accordance with French law (Loi pour la Confiance dans l'Économie Numérique - LCEN), this page provides legally required information about Go React Starter.",
+      "publisher": {
+        "title": "Publisher Information (Éditeur)",
+        "name": "Name",
+        "nameValue": "Guigui Factory",
+        "status": "Status",
+        "statusValue": "Personal project (future company)",
+        "contact": "Contact"
+      },
+      "director": {
+        "title": "Publication Director (Directeur de la publication)",
+        "value": "Guigui Factory"
+      },
+      "hosting": {
+        "title": "Hosting Provider (Hébergeur)",
+        "provider": "Provider",
+        "providerValue": "Microsoft Azure",
+        "address": "Address",
+        "addressValue": "Microsoft France, 39 quai du Président Roosevelt, 92130 Issy-les-Moulineaux, France",
+        "region": "Region",
+        "regionValue": "France Central"
+      },
+      "ip": {
+        "title": "Intellectual Property",
+        "copyright": "All content, design, and code © 2025 Guigui Factory",
+        "trademarks": "Trademarks and logos are property of their respective owners."
+      },
+      "personalData": {
+        "title": "Personal Data & Privacy",
+        "intro": "For information about how we collect, use, and protect your personal data, please refer to our",
+        "privacyLink": "Privacy Policy",
+        "cnil": "Go React Starter complies with the General Data Protection Regulation (GDPR) and French data protection laws enforced by the Commission Nationale de l'Informatique et des Libertés (CNIL)."
+      },
+      "cookies": {
+        "title": "Cookies",
+        "essential": "Essential cookies only (authentication, user session)",
+        "analytics": "Cloudflare analytics (cookieless, privacy-respecting)"
+      },
+      "contact": {
+        "title": "Contact Us",
+        "text": "For any questions or inquiries, please contact us at:"
+      }
+    }
   }
 }
