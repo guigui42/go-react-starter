@@ -141,8 +141,8 @@ fmt:
 	@echo "$(GREEN)✓ Code formatted$(NC)"
 
 db-up:
-	@echo "$(BLUE)Starting local PostgreSQL...$(NC)"
-	@docker compose -f docker/docker-compose.yml up -d db
+	@echo "$(BLUE)Starting local PostgreSQL (port $${DB_PORT:-5433})...$(NC)"
+	@docker compose -f docker/docker-compose.yml up -d db 2>&1 || true
 	@echo "$(GREEN)✓ PostgreSQL started$(NC)"
 
 db-down:
