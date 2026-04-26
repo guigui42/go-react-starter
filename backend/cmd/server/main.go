@@ -201,7 +201,8 @@ auditService := services.NewAuditService(db, log.ZLogger())
 
 // Initialize admin service and handler
 adminService := services.NewAdminService(db)
-adminHandler := handlers.NewAdminHandler(adminService, db, auditService)
+statusRunner := migrations.NewRunner(db, log)
+	adminHandler := handlers.NewAdminHandler(adminService, db, auditService, statusRunner)
 
 // Initialize admin users
 if err := adminService.InitializeAdminUsers(ctx, cfg.Admin.AdminEmails); err != nil {
