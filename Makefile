@@ -141,9 +141,13 @@ fmt:
 	@echo "$(GREEN)✓ Code formatted$(NC)"
 
 db-up:
-	@echo "$(BLUE)Starting local PostgreSQL (port $${DB_PORT:-5433})...$(NC)"
-	@docker compose -f docker/docker-compose.yml up -d db 2>&1 || true
-	@echo "$(GREEN)✓ PostgreSQL started$(NC)"
+	@echo "$(BLUE)Starting local PostgreSQL (port $${DB_PORT:-5434})...$(NC)"
+	@if docker compose -f docker/docker-compose.yml ps --status running db 2>/dev/null | grep -q db; then \
+		echo "$(GREEN)✓ PostgreSQL already running$(NC)"; \
+	else \
+		docker compose -f docker/docker-compose.yml up -d db; \
+		echo "$(GREEN)✓ PostgreSQL started$(NC)"; \
+	fi
 
 db-down:
 	@echo "$(BLUE)Stopping local PostgreSQL...$(NC)"
