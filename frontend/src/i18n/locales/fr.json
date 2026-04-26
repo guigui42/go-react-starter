@@ -21,6 +21,54 @@
     "register": {
       "title": "Inscription - Go React Starter",
       "description": "Créez un nouveau compte."
+    },
+    "verifyEmail": {
+      "title": "Vérifier l'Email - Go React Starter",
+      "description": "Vérifiez votre adresse email pour finaliser la création de votre compte Go React Starter."
+    },
+    "verifyPending": {
+      "title": "Vérifiez Votre Email - Go React Starter",
+      "description": "Un email de vérification a été envoyé à votre adresse. Veuillez vérifier votre boîte de réception."
+    },
+    "privacy": {
+      "title": "Politique de Confidentialité - Go React Starter",
+      "description": "Découvrez comment Go React Starter protège vos données personnelles et assure la conformité RGPD."
+    },
+    "terms": {
+      "title": "Conditions d'Utilisation - Go React Starter",
+      "description": "Lisez les conditions générales d'utilisation du service de suivi de portefeuille Go React Starter."
+    },
+    "legal": {
+      "title": "Mentions Légales - Go React Starter",
+      "description": "Informations légales sur Go React Starter, incluant les détails de l'éditeur et de l'hébergement."
+    },
+    "taxGuide": {
+      "title": "Guide Fiscal Investissement 2025 — Simulateurs | Go React Starter",
+      "description": "Guide fiscal interactif pour les investisseurs français. Comparez PFU et barème progressif, simulez votre PEA, calculez vos plus-values au PMP. Outils gratuits."
+    },
+    "taxGuidePfu": {
+      "title": "PFU vs Barème Progressif 2025 — Simulateur | Go React Starter",
+      "description": "Comparez PFU (flat tax 31,4 %) et barème progressif pour vos plus-values. Simulateur interactif avec tranches 2025 et recommandation personnalisée."
+    },
+    "taxGuidePeaSimulator": {
+      "title": "Simulateur PEA — Avantage Fiscal sur 10 ans | Go React Starter",
+      "description": "Simulez l'avantage fiscal de votre PEA sur 10 ans. Comparez taxation avant et après 5 ans, visualisez l'économie vs CTO. Gratuit, sans inscription."
+    },
+    "taxGuidePeaWithdrawal": {
+      "title": "Fiscalité Retrait PEA 2025 — Calculateur | Go React Starter",
+      "description": "Calculez l'imposition d'un retrait PEA : ratio gains/versements, prélèvements sociaux, impôt sur le revenu avant et après 5 ans. Simulateur interactif gratuit."
+    },
+    "taxGuideCapitalGains": {
+      "title": "Simulateur Plus-Values PMP — Calculateur | Go React Starter",
+      "description": "Calculez vos plus-values avec le PMP (prix moyen pondéré), la méthode imposée par le droit fiscal français. Ajoutez vos lots, simulez une vente et visualisez le détail. Gratuit."
+    },
+    "taxGuideDividends": {
+      "title": "Fiscalité des Dividendes 2025 — Simulateur | Go React Starter",
+      "description": "Simulez l'imposition de vos dividendes français et étrangers. Comparez PFU et barème progressif, calculez le crédit d'impôt et la retenue à la source. Simulateur interactif gratuit."
+    },
+    "taxGuideForms": {
+      "title": "Guide Formulaires Fiscaux Investisseurs 2025 — Quiz Interactif & Cases | Go React Starter",
+      "description": "Quels formulaires fiscaux devez-vous remplir ? Faites notre quiz interactif pour obtenir votre checklist personnalisée. 2042, 2074, 2047, 2042-C, 3916, 2778-DIV avec détail case par case et liens officiels."
     }
   },
   "common": {
@@ -52,7 +100,25 @@
     "info": "Info",
     "comingSoon": "Bientôt disponible",
     "later": "Plus tard",
-    "dismiss": "Fermer"
+    "dismiss": "Fermer",
+    "copy": "Copier",
+    "copied": "Copié",
+    "or": "ou",
+    "moreActions": "Plus d'actions",
+    "noData": "Aucune donnée",
+    "apply": "Appliquer",
+    "clear": "Effacer",
+    "export": "Exporter",
+    "import": "Importer",
+    "new": "Nouveau",
+    "add": "Ajouter",
+    "submit": "Soumettre",
+    "submitting": "Envoi en cours...",
+    "symbol": "Symbole",
+    "amount": "Montant",
+    "country": "Pays",
+    "showMore": "Voir plus",
+    "showLess": "Voir moins"
   },
   "auth": {
     "login": "Connexion",
@@ -218,7 +284,15 @@
     "languages": {
       "en": "English",
       "fr": "Français"
-    }
+    },
+    "dashboard": "Tableau de bord",
+    "portfolio": "Portefeuille",
+    "trades": "Transactions",
+    "brokers": "Comptes Courtiers",
+    "dividends": "Dividendes",
+    "tax": "Rapports Fiscaux",
+    "currency": "Devise",
+    "stockAwards": "Stock Awards"
   },
   "settings": {
     "title": "Paramètres",
@@ -238,7 +312,66 @@
     "deleteAccountWarning": "Cette action est irréversible. Toutes vos données seront définitivement supprimées.",
     "confirmDeleteAccount": "Tapez votre email pour confirmer la suppression",
     "exportData": "Exporter mes données",
-    "exportDataDescription": "Téléchargez toutes vos données au format JSON"
+    "exportDataDescription": "Téléchargez toutes vos données au format JSON",
+    "preferences": {
+      "baseCurrency": "Devise de base"
+    },
+    "profileSettings": {
+      "title": "Paramètres du Profil",
+      "description": "Gérez vos préférences et paramètres personnels",
+      "colorScheme": "Thème",
+      "colorSchemeDescription": "Choisissez votre thème préféré",
+      "colorSchemes": {
+        "light": "Clair",
+        "dark": "Sombre",
+        "auto": "Système"
+      },
+      "language": "Langue",
+      "languageDescription": "Choisissez votre langue préférée pour l'interface",
+      "country": "Pays de Résidence",
+      "countryDescription": "Utilisé pour les calculs fiscaux et les rapports",
+      "saveSuccess": "Paramètres du profil enregistrés avec succès",
+      "saveError": "Échec de l'enregistrement des paramètres du profil",
+      "loadError": "Échec du chargement des paramètres du profil"
+    },
+    "privacySettings": {
+      "title": "Confidentialité & Données",
+      "description": "Gérez vos données personnelles et paramètres de confidentialité",
+      "dataExport": {
+        "title": "Télécharger Mes Données",
+        "description": "Téléchargez toutes vos données personnelles au format JSON. Cela inclut votre profil, préférences, comptes courtiers, transactions, informations sur les clés d'accès (noms et dates uniquement), et rapports fiscaux. Les données sensibles comme les mots de passe et clés privées ne sont pas incluses.",
+        "button": "Télécharger Mes Données",
+        "downloading": "Préparation du téléchargement..."
+      },
+      "exportSuccess": "Vos données ont été téléchargées avec succès.",
+      "exportError": "Échec de l'exportation de vos données. Veuillez réessayer.",
+      "exportRateLimited": "Vous ne pouvez exporter vos données qu'une fois par heure. Veuillez réessayer plus tard."
+    },
+    "notificationSettings": {
+      "title": "Notifications par email",
+      "description": "Gérez comment et quand vous recevez des mises à jour par email sur votre portefeuille.",
+      "digestFrequency": "Fréquence du résumé",
+      "digestFrequencyDescription": "À quelle fréquence souhaitez-vous recevoir un résumé de votre portefeuille ?",
+      "frequencies": {
+        "never": "Jamais",
+        "daily": "Quotidien",
+        "weekly": "Hebdomadaire",
+        "monthly": "Mensuel"
+      },
+      "scheduleInfo": {
+        "daily": "Les emails quotidiens sont envoyés chaque matin à 7h00 CET.",
+        "weekly": "Les emails hebdomadaires sont envoyés chaque lundi matin à 7h00 CET.",
+        "monthly": "Les emails mensuels sont envoyés le 1er de chaque mois à 7h00 CET."
+      },
+      "emailNotVerified": "Vous devez vérifier votre adresse email avant de pouvoir recevoir des notifications par email.",
+      "emailNotVerifiedAction": "Un email de vérification a été envoyé lors de votre inscription. Vérifiez votre boîte de réception ou demandez-en un nouveau ci-dessous.",
+      "resendVerification": "Renvoyer l'email de vérification",
+      "resendIn": "Renvoyer dans {{seconds}}s",
+      "resendSuccess": "Email de vérification envoyé ! Vérifiez votre boîte de réception.",
+      "resendError": "Échec de l'envoi de l'email de vérification. Veuillez réessayer plus tard.",
+      "saved": "Préférences de notification enregistrées",
+      "saveError": "Échec de l'enregistrement des préférences de notification"
+    }
   },
   "footer": {
     "navigation": "Navigation du pied de page",

@@ -21,6 +21,54 @@
     "register": {
       "title": "Register - Go React Starter",
       "description": "Create a new account."
+    },
+    "verifyEmail": {
+      "title": "Verify Email - Go React Starter",
+      "description": "Verify your email address to complete your Go React Starter account registration."
+    },
+    "verifyPending": {
+      "title": "Check Your Email - Go React Starter",
+      "description": "A verification email has been sent to your address. Please check your inbox."
+    },
+    "privacy": {
+      "title": "Privacy Policy - Go React Starter",
+      "description": "Learn how Go React Starter protects your personal data and ensures GDPR compliance."
+    },
+    "terms": {
+      "title": "Terms of Service - Go React Starter",
+      "description": "Read the terms and conditions for using the Go React Starter portfolio tracking service."
+    },
+    "legal": {
+      "title": "Legal Notice - Go React Starter",
+      "description": "Legal information about Go React Starter, including publisher details and hosting information."
+    },
+    "taxGuide": {
+      "title": "French Investment Tax Guide 2025 — Free Simulators | Go React Starter",
+      "description": "Interactive French investment tax guide. Compare PFU vs progressive tax, simulate PEA timeline, calculate PMP capital gains. Free tools for French investors."
+    },
+    "taxGuidePfu": {
+      "title": "PFU vs Progressive Tax 2025 — Simulator | Go React Starter",
+      "description": "Compare France PFU flat tax (31.4%) vs progressive brackets for capital gains. Interactive simulator with 2025 rates, social charges, and personalised advice."
+    },
+    "taxGuidePeaSimulator": {
+      "title": "PEA Tax Advantage Simulator — 10-Year Projection | Go React Starter",
+      "description": "Simulate PEA tax savings over 10 years. Compare taxation before and after the 5-year threshold vs standard brokerage. Free tool, no sign-up."
+    },
+    "taxGuidePeaWithdrawal": {
+      "title": "PEA Withdrawal Tax 2025 — Calculator | Go React Starter",
+      "description": "Calculate taxes on PEA withdrawals: gain ratio, social charges, income tax before and after 5 years. Free interactive simulator for French investors."
+    },
+    "taxGuideCapitalGains": {
+      "title": "PMP Capital Gains Calculator — Simulator | Go React Starter",
+      "description": "Calculate capital gains using PMP (weighted average cost), the method mandated by French tax law. Add buy lots, simulate a sell, and see the step-by-step breakdown. Free tool."
+    },
+    "taxGuideDividends": {
+      "title": "Dividend Tax 2025 — Simulator | Go React Starter",
+      "description": "Simulate taxation on French and foreign dividends. Compare PFU vs progressive tax, calculate tax credits and withholding tax. Free interactive simulator."
+    },
+    "taxGuideForms": {
+      "title": "Tax Forms Guide for French Investors 2025 — Interactive Quiz & Boxes | Go React Starter",
+      "description": "Which French tax forms do you need? Take our interactive quiz to get a personalized checklist. Covers 2042, 2074, 2047, 2042-C, 3916, 2778-DIV with box-level detail and official links."
     }
   },
   "common": {
@@ -52,7 +100,25 @@
     "info": "Info",
     "comingSoon": "Coming Soon",
     "later": "Later",
-    "dismiss": "Dismiss"
+    "dismiss": "Dismiss",
+    "copy": "Copy",
+    "copied": "Copied",
+    "or": "or",
+    "moreActions": "More actions",
+    "noData": "No data",
+    "apply": "Apply",
+    "clear": "Clear",
+    "export": "Export",
+    "import": "Import",
+    "new": "New",
+    "add": "Add",
+    "submit": "Submit",
+    "submitting": "Submitting...",
+    "symbol": "Symbol",
+    "amount": "Amount",
+    "country": "Country",
+    "showMore": "Show more",
+    "showLess": "Show less"
   },
   "auth": {
     "login": "Login",
@@ -218,7 +284,15 @@
     "languages": {
       "en": "English",
       "fr": "Français"
-    }
+    },
+    "dashboard": "Dashboard",
+    "portfolio": "Portfolio",
+    "trades": "Trades",
+    "brokers": "Broker Accounts",
+    "dividends": "Dividends",
+    "tax": "Tax Reports",
+    "currency": "Currency",
+    "stockAwards": "Stock Awards"
   },
   "settings": {
     "title": "Settings",
@@ -238,7 +312,66 @@
     "deleteAccountWarning": "This action cannot be undone. All your data will be permanently deleted.",
     "confirmDeleteAccount": "Type your email to confirm deletion",
     "exportData": "Export My Data",
-    "exportDataDescription": "Download all your data in JSON format"
+    "exportDataDescription": "Download all your data in JSON format",
+    "preferences": {
+      "baseCurrency": "Base Currency"
+    },
+    "profileSettings": {
+      "title": "Profile Settings",
+      "description": "Manage your personal preferences and settings",
+      "colorScheme": "Theme",
+      "colorSchemeDescription": "Choose your preferred color scheme",
+      "colorSchemes": {
+        "light": "Light",
+        "dark": "Dark",
+        "auto": "System"
+      },
+      "language": "Language",
+      "languageDescription": "Choose your preferred language for the interface",
+      "country": "Country of Residence",
+      "countryDescription": "Used for tax calculations and reporting",
+      "saveSuccess": "Profile settings saved successfully",
+      "saveError": "Failed to save profile settings",
+      "loadError": "Failed to load profile settings"
+    },
+    "privacySettings": {
+      "title": "Privacy & Data",
+      "description": "Manage your personal data and privacy settings",
+      "dataExport": {
+        "title": "Download My Data",
+        "description": "Download all your personal data in JSON format. This includes your profile, preferences, broker accounts, trades, passkey information (names and dates only), and tax reports. Sensitive data like passwords and private keys are not included.",
+        "button": "Download My Data",
+        "downloading": "Preparing download..."
+      },
+      "exportSuccess": "Your data has been downloaded successfully.",
+      "exportError": "Failed to export your data. Please try again.",
+      "exportRateLimited": "You can only export your data once per hour. Please try again later."
+    },
+    "notificationSettings": {
+      "title": "Email Notifications",
+      "description": "Manage how and when you receive email updates about your portfolio.",
+      "digestFrequency": "Portfolio digest frequency",
+      "digestFrequencyDescription": "How often would you like to receive a summary of your portfolio?",
+      "frequencies": {
+        "never": "Never",
+        "daily": "Daily",
+        "weekly": "Weekly",
+        "monthly": "Monthly"
+      },
+      "scheduleInfo": {
+        "daily": "Daily emails are sent every morning at 7:00 AM CET.",
+        "weekly": "Weekly emails are sent every Monday morning at 7:00 AM CET.",
+        "monthly": "Monthly emails are sent on the 1st of each month at 7:00 AM CET."
+      },
+      "emailNotVerified": "You need to verify your email address before you can receive email notifications.",
+      "emailNotVerifiedAction": "A verification email was sent when you registered. Check your inbox or request a new one below.",
+      "resendVerification": "Resend verification email",
+      "resendIn": "Resend in {{seconds}}s",
+      "resendSuccess": "Verification email sent! Check your inbox.",
+      "resendError": "Failed to send verification email. Please try again later.",
+      "saved": "Notification preferences saved",
+      "saveError": "Failed to save notification preferences"
+    }
   },
   "footer": {
     "navigation": "Footer navigation",
