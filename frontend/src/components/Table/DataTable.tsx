@@ -40,7 +40,7 @@ export function DataTable<T>({ data, columns, getRowKey, stickyHeader = false, g
           {data.map((row) => (
             <Table.Tr
               key={getRowKey(row)}
-              className={classes.Go React StarterTableRow}
+              className={classes.appTableRow}
               style={getRowStyle?.(row)}
             >
               {columns.map((col) => (

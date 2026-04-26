@@ -13,8 +13,8 @@
 }
 
 :global([data-mantine-color-scheme="dark"]) .header {
-  border-bottom-color: var(--pecunia-border-subtle);
-  background-color: var(--pecunia-elevation-surface);
+  border-bottom-color: var(--app-border-subtle);
+  background-color: var(--app-elevation-surface);
 }
 
 .logo {
@@ -42,7 +42,7 @@
 }
 
 :global([data-mantine-color-scheme="dark"]) .link:hover {
-  background-color: var(--pecunia-elevation-elevated);
+  background-color: var(--app-elevation-elevated);
 }
 
 .link[data-active] {
@@ -68,7 +68,7 @@
 }
 
 :global([data-mantine-color-scheme="dark"]) .user:hover {
-  background-color: var(--pecunia-elevation-elevated);
+  background-color: var(--app-elevation-elevated);
 }
 
 .mobileNav {
@@ -84,8 +84,8 @@
 }
 
 :global([data-mantine-color-scheme="dark"]) .mobileNav {
-  border-top-color: var(--pecunia-border-subtle);
-  background-color: var(--pecunia-elevation-surface);
+  border-top-color: var(--app-border-subtle);
+  background-color: var(--app-elevation-surface);
 }
 
 /* Focus visible styles for accessibility */

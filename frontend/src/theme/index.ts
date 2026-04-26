@@ -14,7 +14,7 @@ import {
 
 // Dark palette with cool blue undertones for premium depth layering
 // dark[7] = page body, dark[6] = cards/panels, dark[5] = modals/popovers
-const Go React StarterDark: MantineColorsTuple = [
+const AppDark: MantineColorsTuple = [
   '#C1C8D6',
   '#A6AEBF',
   '#8B94A9',
@@ -28,7 +28,7 @@ const Go React StarterDark: MantineColorsTuple = [
 ];
 
 // Primary brand color - Modern deep blue with confidence
-const Go React StarterBlue: MantineColorsTuple = [
+const AppBlue: MantineColorsTuple = [
   '#eef3ff',
   '#dce4f5',
   '#b9c7e2',
@@ -42,7 +42,7 @@ const Go React StarterBlue: MantineColorsTuple = [
 ];
 
 // Premium emerald for success/gains - Evokes growth and prosperity
-const Go React StarterGreen: MantineColorsTuple = [
+const AppGreen: MantineColorsTuple = [
   '#e6fcf5',
   '#c3fae8',
   '#8de4c8',
@@ -56,7 +56,7 @@ const Go React StarterGreen: MantineColorsTuple = [
 ];
 
 // Warm gold for accents - Premium feel
-const Go React StarterGold: MantineColorsTuple = [
+const AppGold: MantineColorsTuple = [
   '#fff9db',
   '#fff3bf',
   '#ffec99',
@@ -70,7 +70,7 @@ const Go React StarterGold: MantineColorsTuple = [
 ];
 
 // Coral for losses/alerts
-const Go React StarterCoral: MantineColorsTuple = [
+const AppCoral: MantineColorsTuple = [
   '#fff5f5',
   '#ffe3e3',
   '#ffc9c9',
@@ -84,7 +84,7 @@ const Go React StarterCoral: MantineColorsTuple = [
 ];
 
 // Sophisticated slate for text and backgrounds
-const Go React StarterSlate: MantineColorsTuple = [
+const AppSlate: MantineColorsTuple = [
   '#f8f9fa',
   '#f1f3f5',
   '#e9ecef',
@@ -116,16 +116,16 @@ export const theme = createTheme({
   },
 
   /** Primary color for branding */
-  primaryColor: 'Go React StarterBlue',
+  primaryColor: 'AppBlue',
 
   /** Extended color palette */
   colors: {
-    Go React StarterBlue,
-    Go React StarterGreen,
-    Go React StarterGold,
-    Go React StarterCoral,
-    Go React StarterSlate,
-    dark: Go React StarterDark,
+    AppBlue,
+    AppGreen,
+    AppGold,
+    AppCoral,
+    AppSlate,
+    dark: AppDark,
   },
 
   /** Breakpoints */
@@ -188,7 +188,7 @@ export const theme = createTheme({
       styles: {
         root: {
           transition: 'all 0.2s ease',
-          borderColor: 'var(--Go React Starter-border-subtle)',
+          borderColor: 'var(--app-border-subtle)',
         },
       },
     },
@@ -198,31 +198,31 @@ export const theme = createTheme({
       },
       styles: {
         root: {
-          borderColor: 'var(--Go React Starter-border-subtle)',
+          borderColor: 'var(--app-border-subtle)',
         },
       },
     },
     Modal: {
       styles: {
         content: {
-          backgroundColor: 'var(--Go React Starter-elevation-elevated)',
-          borderColor: 'var(--Go React Starter-border-subtle)',
+          backgroundColor: 'var(--app-elevation-elevated)',
+          borderColor: 'var(--app-border-subtle)',
         },
       },
     },
     Popover: {
       styles: {
         dropdown: {
-          backgroundColor: 'var(--Go React Starter-elevation-elevated)',
-          borderColor: 'var(--Go React Starter-border-subtle)',
+          backgroundColor: 'var(--app-elevation-elevated)',
+          borderColor: 'var(--app-border-subtle)',
         },
       },
     },
     Menu: {
       styles: {
         dropdown: {
-          backgroundColor: 'var(--Go React Starter-elevation-elevated)',
-          borderColor: 'var(--Go React Starter-border-subtle)',
+          backgroundColor: 'var(--app-elevation-elevated)',
+          borderColor: 'var(--app-border-subtle)',
         },
       },
     },
@@ -257,27 +257,27 @@ export const theme = createTheme({
  */
 export const cssVariablesResolver: CSSVariablesResolver = () => ({
   variables: {
-    '--Go React Starter-border-subtle': 'rgba(0, 0, 0, 0.08)',
-    '--Go React Starter-elevation-elevated': 'var(--mantine-color-body)',
+    '--app-border-subtle': 'rgba(0, 0, 0, 0.08)',
+    '--app-elevation-elevated': 'var(--mantine-color-body)',
   },
   light: {
-    '--Go React Starter-elevation-bg': '#ffffff',
-    '--Go React Starter-elevation-surface': '#ffffff',
-    '--Go React Starter-elevation-elevated': '#ffffff',
-    '--Go React Starter-border-subtle': 'rgba(0, 0, 0, 0.08)',
-    '--Go React Starter-accent-glow': 'none',
-    '--Go React Starter-shadow-sm': '0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06)',
-    '--Go React Starter-shadow-md': '0 4px 8px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.06)',
+    '--app-elevation-bg': '#ffffff',
+    '--app-elevation-surface': '#ffffff',
+    '--app-elevation-elevated': '#ffffff',
+    '--app-border-subtle': 'rgba(0, 0, 0, 0.08)',
+    '--app-accent-glow': 'none',
+    '--app-shadow-sm': '0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06)',
+    '--app-shadow-md': '0 4px 8px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.06)',
   },
   dark: {
-    '--Go React Starter-elevation-bg': '#0f1117',
-    '--Go React Starter-elevation-surface': '#1a1d27',
-    '--Go React Starter-elevation-elevated': '#242836',
-    '--Go React Starter-border-subtle': 'rgba(255, 255, 255, 0.06)',
-    '--Go React Starter-accent-glow': '0 0 20px rgba(94, 124, 184, 0.3)',
-    '--Go React Starter-shadow-sm':
+    '--app-elevation-bg': '#0f1117',
+    '--app-elevation-surface': '#1a1d27',
+    '--app-elevation-elevated': '#242836',
+    '--app-border-subtle': 'rgba(255, 255, 255, 0.06)',
+    '--app-accent-glow': '0 0 20px rgba(94, 124, 184, 0.3)',
+    '--app-shadow-sm':
       '0 1px 3px rgba(0,0,0,0.4), 0 1px 2px rgba(0,0,0,0.3)',
-    '--Go React Starter-shadow-md':
+    '--app-shadow-md':
       '0 4px 12px rgba(0,0,0,0.5), 0 2px 4px rgba(0,0,0,0.3)',
   },
 });

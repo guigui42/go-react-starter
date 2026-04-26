@@ -166,12 +166,12 @@ td, th,
 /* Enhanced shadows in dark mode */
 [data-mantine-color-scheme="dark"] .mantine-Card-root,
 [data-mantine-color-scheme="dark"] .mantine-Paper-root {
-  box-shadow: var(--pecunia-shadow-sm);
+  box-shadow: var(--app-shadow-sm);
 }
 
 /* Accent glow on primary filled buttons */
 [data-mantine-color-scheme="dark"] .mantine-Button-root[data-variant="filled"] {
-  box-shadow: var(--pecunia-accent-glow);
+  box-shadow: var(--app-accent-glow);
 }
 
 [data-mantine-color-scheme="dark"] .mantine-Button-root[data-variant="filled"]:hover {

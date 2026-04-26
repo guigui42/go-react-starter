@@ -5,5 +5,5 @@
 }
 
 :global([data-mantine-color-scheme="dark"]) .footer {
-  border-top-color: var(--pecunia-border-subtle);
+  border-top-color: var(--app-border-subtle);
 }
