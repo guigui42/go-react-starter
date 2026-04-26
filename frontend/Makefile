@@ -1,31 +1,30 @@
 .PHONY: dev build preview test test-coverage lint format install type-check
 
-# Default target
 .DEFAULT_GOAL := dev
 
-install: ## Install npm dependencies
-npm install
+install:
+	npm install
 
-dev: ## Run development server
-npm run dev
+dev:
+	npm run dev
 
-build: ## Build for production
-npm run build
+build:
+	npm run build
 
-preview: ## Preview production build
-npm run preview
+preview:
+	npm run preview
 
-test: ## Run unit tests
-npm run test
+test:
+	npm run test
 
-test-coverage: ## Run tests with coverage
-npm run test:coverage
+test-coverage:
+	npm run test:coverage
 
-lint: ## Run ESLint
-npm run lint
+lint:
+	npm run lint
 
-format: ## Format code with Prettier
-npm run format
+format:
+	npm run format
 
-type-check: ## Run TypeScript type checking
-npx tsc --noEmit
+type-check:
+	npx tsc --noEmit
