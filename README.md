@@ -113,21 +113,22 @@ go-react-starter/
 └── .github/workflows/          # CI/CD pipelines
 ```
 
-## 🛠️ Customization
+## 📖 Documentation
 
-### Adding a New Feature
+Comprehensive guides are in the [`docs/`](docs/) folder:
 
-1. **Backend**: Create model → migration → repository → handler → register routes in `main.go`
-2. **Frontend**: Create types → hooks → components → route
-3. See the `notes` feature as a reference implementation
-
-### Changing the Project Name
-
-Replace `go-react-starter` / `example` in:
-- `backend/go.mod` (module path)
-- `frontend/package.json` (name)
-- `docker/` files
-- `.github/workflows/`
+| Guide | Description |
+|-------|-------------|
+| [Getting Started](docs/getting-started.md) | Setup, prerequisites, Makefile reference |
+| [Architecture](docs/architecture.md) | System design, layers, request flow |
+| [Authentication](docs/authentication.md) | All auth methods, JWT, sessions |
+| [Adding Features](docs/adding-features.md) | Step-by-step new feature guide |
+| [Security](docs/security.md) | Middleware, CSRF, RLS, CSP |
+| [Database & Migrations](docs/database.md) | PostgreSQL, GORM, migration system |
+| [Deployment](docs/deployment.md) | Docker, nginx, CI/CD |
+| [Configuration](docs/configuration.md) | All environment variables |
+| [Testing](docs/testing.md) | Test infrastructure, per-test DB isolation |
+| [Frontend](docs/frontend.md) | React, routing, i18n, components |
 
 ## 📄 License
 
