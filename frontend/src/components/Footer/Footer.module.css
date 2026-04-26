@@ -1,0 +1,9 @@
+.footer {
+  padding: var(--mantine-spacing-md) var(--mantine-spacing-md);
+  margin-top: auto;
+  border-top: 1px solid var(--mantine-color-gray-3);
+}
+
+:global([data-mantine-color-scheme="dark"]) .footer {
+  border-top-color: var(--pecunia-border-subtle);
+}

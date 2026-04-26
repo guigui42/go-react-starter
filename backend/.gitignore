@@ -1,0 +1,38 @@
+# Test coverage files
+coverage.out
+coverage.html
+
+# Binary output
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+/server
+/migrate
+
+# Example binaries (prevent committing compiled example programs)
+/examples/*/main
+/examples/config/config
+/examples/database/database
+/examples/logging/logging
+config
+database
+logging
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool
+*.out
+
+# Go workspace file
+go.work
+
+# Environment variables
+.env
+
+# Database files
+*.db
+*.db-shm
+*.db-wal

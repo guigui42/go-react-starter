@@ -1,0 +1,36 @@
+Your {{.PeriodLabel}} Portfolio Summary
+========================================
+
+{{.PeriodStart}} — {{.PeriodEnd}}
+
+Portfolio Overview
+------------------
+Current Value:  {{.CurrentValue}}
+Change:         {{.ValueChange}} ({{.ValueChangePct}})
+Positions:      {{.PositionsCount}} active
+{{if .HasGainers}}
+Top Gainers
+-----------
+{{range .TopGainers}}  {{.Symbol}}    {{.Change}}    {{.ChangePct}}
+{{end}}{{end}}{{if .HasLosers}}
+Top Losers
+----------
+{{range .TopLosers}}  {{.Symbol}}    {{.Change}}    {{.ChangePct}}
+{{end}}{{end}}{{if .HasDividends}}
+Dividends Received
+------------------
+{{range .Dividends}}  {{.Symbol}}    {{.Amount}}    {{.Date}}
+{{end}}
+Total: {{.TotalDividends}}
+{{end}}{{if .HasTrades}}
+Recent Trades
+-------------
+{{range .Trades}}  {{.Symbol}}    {{.Type}}    Qty: {{.Quantity}}    Price: {{.Price}}    {{.Date}}
+{{end}}{{end}}
+View your portfolio: {{.AppURL}}/portfolio
+
+---
+You are receiving this email because you opted in to portfolio digests.
+Unsubscribe: {{.UnsubscribeURL}}
+
+© {{.Year}} Go React Starter. All rights reserved.

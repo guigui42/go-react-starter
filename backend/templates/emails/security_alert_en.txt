@@ -1,0 +1,19 @@
+Go React Starter - Security Alert
+========================
+
+🔒 {{.AlertTitle}}
+
+{{.AlertMessage}}
+
+{{if .Details}}
+Details:
+{{range $key, $value := .Details}}
+- {{$key}}: {{$value}}
+{{end}}
+{{end}}
+
+If this was you, no action is needed. If you did not perform this action, please secure your account immediately by changing your password or contacting support.
+
+---
+© {{.Year}} Go React Starter. All rights reserved.
+This is an automated security notification.

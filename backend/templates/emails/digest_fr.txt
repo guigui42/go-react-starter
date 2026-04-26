@@ -1,0 +1,36 @@
+Résumé {{.PeriodLabel}} de votre portefeuille
+=============================================
+
+{{.PeriodStart}} — {{.PeriodEnd}}
+
+Aperçu du portefeuille
+----------------------
+Valeur actuelle :  {{.CurrentValue}}
+Variation :        {{.ValueChange}} ({{.ValueChangePct}})
+Positions :        {{.PositionsCount}} actives
+{{if .HasGainers}}
+Meilleures performances
+-----------------------
+{{range .TopGainers}}  {{.Symbol}}    {{.Change}}    {{.ChangePct}}
+{{end}}{{end}}{{if .HasLosers}}
+Plus fortes baisses
+-------------------
+{{range .TopLosers}}  {{.Symbol}}    {{.Change}}    {{.ChangePct}}
+{{end}}{{end}}{{if .HasDividends}}
+Dividendes reçus
+----------------
+{{range .Dividends}}  {{.Symbol}}    {{.Amount}}    {{.Date}}
+{{end}}
+Total : {{.TotalDividends}}
+{{end}}{{if .HasTrades}}
+Transactions récentes
+---------------------
+{{range .Trades}}  {{.Symbol}}    {{.Type}}    Qté: {{.Quantity}}    Prix: {{.Price}}    {{.Date}}
+{{end}}{{end}}
+Voir votre portefeuille : {{.AppURL}}/portfolio
+
+---
+Vous recevez cet email car vous avez activé les résumés de portefeuille.
+Se désabonner : {{.UnsubscribeURL}}
+
+© {{.Year}} Go React Starter. Tous droits réservés.

@@ -1,0 +1,8 @@
+.pecuniaTableRow {
+  transition: border-left 0.15s ease;
+  border-left: 3px solid transparent;
+}
+
+.pecuniaTableRow:hover {
+  border-left: 3px solid var(--mantine-color-pecuniaBlue-5);
+}

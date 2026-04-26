@@ -1,0 +1,16 @@
+Go React Starter - Verify Your Email Address
+=====================================
+
+Hello,
+
+Thank you for registering with Go React Starter! To complete your registration and secure your account, please verify your email address by clicking the link below:
+
+{{.VerificationURL}}
+
+⏰ This link will expire in 24 hours.
+
+If you didn't create an account with Go React Starter, you can safely ignore this email.
+
+---
+© {{.Year}} Go React Starter. All rights reserved.
+This is an automated message. Please do not reply to this email.

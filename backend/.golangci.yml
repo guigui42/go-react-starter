@@ -1,0 +1,19 @@
+version: "2"
+
+formatters:
+  enable:
+    - gofmt
+
+linters:
+  enable:
+    - govet
+    - errcheck
+    - staticcheck
+    - ineffassign
+    - unused
+    - gocyclo
+    - misspell
+
+  settings:
+    gocyclo:
+      min-complexity: 15

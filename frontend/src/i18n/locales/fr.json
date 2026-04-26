@@ -1,0 +1,166 @@
+{
+  "errors": {
+    "networkError": "Erreur réseau. Veuillez réessayer.",
+    "serverError": "Erreur serveur. Veuillez réessayer plus tard.",
+    "notFound": "Ressource introuvable",
+    "unauthorized": "Vous devez être connecté pour accéder à cette page",
+    "pageNotFound": "Page introuvable",
+    "pageNotFoundDescription": "La page que vous recherchez n'existe pas ou a été déplacée.",
+    "goHome": "Retour à l'accueil",
+    "goBack": "Retour"
+  },
+  "seo": {
+    "home": {
+      "title": "Go React Starter",
+      "description": "Template full-stack Go + React"
+    },
+    "login": {
+      "title": "Connexion - Go React Starter",
+      "description": "Connectez-vous à votre compte."
+    },
+    "register": {
+      "title": "Inscription - Go React Starter",
+      "description": "Créez un nouveau compte."
+    }
+  },
+  "common": {
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "create": "Créer",
+    "search": "Rechercher",
+    "loading": "Chargement...",
+    "noResults": "Aucun résultat",
+    "confirm": "Confirmer",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "close": "Fermer",
+    "actions": "Actions",
+    "status": "Statut",
+    "date": "Date",
+    "name": "Nom",
+    "description": "Description",
+    "type": "Type",
+    "total": "Total",
+    "yes": "Oui",
+    "no": "Non",
+    "success": "Succès",
+    "error": "Erreur",
+    "warning": "Avertissement",
+    "info": "Info",
+    "comingSoon": "Bientôt disponible",
+    "later": "Plus tard",
+    "dismiss": "Fermer"
+  },
+  "auth": {
+    "login": "Se connecter",
+    "register": "Créer un compte",
+    "logout": "Se déconnecter",
+    "email": "Email",
+    "password": "Mot de passe",
+    "confirmPassword": "Confirmer le mot de passe",
+    "forgotPassword": "Mot de passe oublié ?",
+    "noAccount": "Pas encore de compte ?",
+    "haveAccount": "Vous avez déjà un compte ?",
+    "loginSuccess": "Connexion réussie",
+    "registerSuccess": "Compte créé avec succès",
+    "logoutSuccess": "Déconnexion réussie",
+    "invalidCredentials": "Email ou mot de passe incorrect",
+    "passwordRequirements": "Le mot de passe doit contenir au moins 8 caractères"
+  },
+  "nav": {
+    "home": "Accueil",
+    "notes": "Notes",
+    "settings": "Paramètres",
+    "admin": "Tableau de bord admin",
+    "account": "Compte",
+    "language": "Langue",
+    "back": "Retour",
+    "toggleNavigation": "Basculer la navigation",
+    "languages": {
+      "en": "English",
+      "fr": "Français"
+    }
+  },
+  "settings": {
+    "title": "Paramètres",
+    "profile": "Profil",
+    "security": "Sécurité",
+    "privacy": "Confidentialité",
+    "notifications": "Notifications",
+    "appearance": "Apparence",
+    "language": "Langue",
+    "theme": "Thème",
+    "darkMode": "Mode sombre",
+    "lightMode": "Mode clair",
+    "autoMode": "Système",
+    "saveSuccess": "Paramètres enregistrés",
+    "profileUpdated": "Profil mis à jour",
+    "deleteAccount": "Supprimer le compte",
+    "deleteAccountWarning": "Cette action est irréversible. Toutes vos données seront définitivement supprimées.",
+    "confirmDeleteAccount": "Tapez votre email pour confirmer la suppression",
+    "exportData": "Exporter mes données",
+    "exportDataDescription": "Téléchargez toutes vos données au format JSON"
+  },
+  "footer": {
+    "navigation": "Navigation du pied de page",
+    "privacy": "Confidentialité",
+    "terms": "Conditions",
+    "legal": "Mentions légales",
+    "company": "Go React Starter.",
+    "rights": "Tous droits réservés."
+  },
+  "notes": {
+    "title": "Notes",
+    "createNote": "Créer une note",
+    "editNote": "Modifier la note",
+    "deleteNote": "Supprimer la note",
+    "noteTitle": "Titre",
+    "noteContent": "Contenu",
+    "noNotes": "Aucune note. Créez votre première note !",
+    "deleteConfirm": "Êtes-vous sûr de vouloir supprimer cette note ?",
+    "createSuccess": "Note créée avec succès",
+    "updateSuccess": "Note mise à jour avec succès",
+    "deleteSuccess": "Note supprimée avec succès"
+  },
+  "passkey": {
+    "title": "Clés d'accès",
+    "description": "Connectez-vous en toute sécurité sans mot de passe grâce à la biométrie ou aux clés de sécurité.",
+    "register": "Enregistrer une clé",
+    "authenticate": "Se connecter avec une clé",
+    "manage": "Gérer les clés",
+    "noPasskeys": "Aucune clé enregistrée",
+    "registerSuccess": "Clé enregistrée avec succès",
+    "deleteSuccess": "Clé supprimée avec succès",
+    "name": "Nom de la clé",
+    "lastUsed": "Dernière utilisation",
+    "createdAt": "Créée le"
+  },
+  "backup_codes": {
+    "title": "Codes de secours",
+    "description": "Utilisez les codes de secours pour vous connecter si vous perdez l'accès à votre clé.",
+    "generate": "Générer des codes",
+    "regenerate": "Régénérer les codes",
+    "warning": "Conservez ces codes en lieu sûr. Chaque code ne peut être utilisé qu'une seule fois.",
+    "remaining": "{{count}} codes restants"
+  },
+  "emailVerification": {
+    "title": "Vérifiez votre email",
+    "description": "Veuillez vérifier votre email pour le lien de vérification.",
+    "resend": "Renvoyer l'email de vérification",
+    "resendSuccess": "Email de vérification envoyé",
+    "verified": "Email vérifié avec succès"
+  },
+  "pwa": {
+    "updateAvailable": "Mise à jour disponible",
+    "updateMessage": "Une nouvelle version est disponible. Rechargez pour obtenir les dernières fonctionnalités.",
+    "reload": "Recharger"
+  },
+  "legal": {
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "legal": "Mentions légales"
+  }
+}

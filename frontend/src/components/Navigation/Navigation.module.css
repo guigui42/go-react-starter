@@ -1,0 +1,103 @@
+.header {
+  height: 60px;
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid var(--mantine-color-gray-3);
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: var(--mantine-color-white);
+  backdrop-filter: blur(12px);
+}
+
+:global([data-mantine-color-scheme="dark"]) .header {
+  border-bottom-color: var(--pecunia-border-subtle);
+  background-color: var(--pecunia-elevation-surface);
+}
+
+.logo {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--mantine-radius-md);
+  text-decoration: none;
+  color: var(--mantine-color-text);
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: background-color 150ms ease;
+}
+
+.link:hover {
+  background-color: var(--mantine-color-gray-0);
+}
+
+:global([data-mantine-color-scheme="dark"]) .link:hover {
+  background-color: var(--pecunia-elevation-elevated);
+}
+
+.link[data-active] {
+  background-color: var(--mantine-primary-color-light);
+  color: var(--mantine-primary-color-filled);
+}
+
+.link[data-active]:hover {
+  background-color: var(--mantine-primary-color-light-hover);
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: var(--mantine-radius-md);
+  transition: background-color 150ms ease;
+  cursor: pointer;
+}
+
+.user:hover {
+  background-color: var(--mantine-color-gray-0);
+}
+
+:global([data-mantine-color-scheme="dark"]) .user:hover {
+  background-color: var(--pecunia-elevation-elevated);
+}
+
+.mobileNav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: var(--mantine-spacing-md);
+  border-top: 1px solid var(--mantine-color-gray-3);
+  background-color: var(--mantine-color-white);
+  box-shadow: var(--mantine-shadow-md);
+  z-index: 100;
+}
+
+:global([data-mantine-color-scheme="dark"]) .mobileNav {
+  border-top-color: var(--pecunia-border-subtle);
+  background-color: var(--pecunia-elevation-surface);
+}
+
+/* Focus visible styles for accessibility */
+.link:focus-visible,
+.user:focus-visible {
+  outline: 2px solid var(--mantine-primary-color-filled);
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .link[data-active] {
+    outline: 2px solid currentColor;
+  }
+}
