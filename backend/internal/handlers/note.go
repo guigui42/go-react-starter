@@ -6,9 +6,9 @@ import (
 "strings"
 
 "github.com/go-chi/chi/v5"
-"github.com/example/go-react-starter/internal/models"
-"github.com/example/go-react-starter/internal/repository"
-"github.com/example/go-react-starter/pkg/response"
+"github.com/guigui42/go-react-starter/internal/models"
+"github.com/guigui42/go-react-starter/internal/repository"
+"github.com/guigui42/go-react-starter/pkg/response"
 "github.com/google/uuid"
 "gorm.io/gorm"
 )

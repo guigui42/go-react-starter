@@ -9,8 +9,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/example/go-react-starter/pkg/logger"
-	"github.com/example/go-react-starter/pkg/response"
+	"github.com/guigui42/go-react-starter/pkg/logger"
+	"github.com/guigui42/go-react-starter/pkg/response"
 	"golang.org/x/time/rate"
 )
 

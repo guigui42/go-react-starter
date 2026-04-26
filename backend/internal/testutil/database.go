@@ -16,7 +16,7 @@ import (
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
 
-	"github.com/example/go-react-starter/internal/models"
+	"github.com/guigui42/go-react-starter/internal/models"
 )
 
 // TestBcryptCost is the bcrypt cost used during tests.

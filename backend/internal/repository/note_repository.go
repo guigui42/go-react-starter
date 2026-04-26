@@ -3,8 +3,8 @@ package repository
 import (
 "context"
 
-"github.com/example/go-react-starter/internal/models"
-"github.com/example/go-react-starter/internal/repository/scopes"
+"github.com/guigui42/go-react-starter/internal/models"
+"github.com/guigui42/go-react-starter/internal/repository/scopes"
 "gorm.io/gorm"
 )
 

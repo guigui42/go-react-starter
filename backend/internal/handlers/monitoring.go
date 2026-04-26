@@ -4,7 +4,7 @@ import (
 "net/http"
 "time"
 
-"github.com/example/go-react-starter/pkg/response"
+"github.com/guigui42/go-react-starter/pkg/response"
 )
 
 // MonitoringHandler handles system monitoring endpoints.

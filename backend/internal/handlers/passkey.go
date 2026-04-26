@@ -12,12 +12,12 @@ import (
 	"github.com/go-webauthn/webauthn/protocol"
 	"github.com/go-webauthn/webauthn/webauthn"
 	"github.com/google/uuid"
-	"github.com/example/go-react-starter/internal/config"
-	"github.com/example/go-react-starter/internal/middleware"
-	"github.com/example/go-react-starter/internal/models"
-	"github.com/example/go-react-starter/internal/repository"
-	"github.com/example/go-react-starter/internal/services"
-	"github.com/example/go-react-starter/pkg/response"
+	"github.com/guigui42/go-react-starter/internal/config"
+	"github.com/guigui42/go-react-starter/internal/middleware"
+	"github.com/guigui42/go-react-starter/internal/models"
+	"github.com/guigui42/go-react-starter/internal/repository"
+	"github.com/guigui42/go-react-starter/internal/services"
+	"github.com/guigui42/go-react-starter/pkg/response"
 	"gorm.io/gorm"
 )
 

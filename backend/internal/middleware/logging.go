@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"github.com/go-chi/chi/v5/middleware"
-	"github.com/example/go-react-starter/pkg/logger"
+	"github.com/guigui42/go-react-starter/pkg/logger"
 )
 
 // contextKey is the type for context keys

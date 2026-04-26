@@ -7,7 +7,7 @@ import (
 "time"
 
 "github.com/google/uuid"
-"github.com/example/go-react-starter/internal/models"
+"github.com/guigui42/go-react-starter/internal/models"
 "golang.org/x/crypto/bcrypt"
 "gorm.io/gorm"
 )

@@ -4,7 +4,7 @@ import (
 	"errors"
 	"net/http"
 
-	"github.com/example/go-react-starter/pkg/response"
+	"github.com/guigui42/go-react-starter/pkg/response"
 )
 
 // DefaultMaxBodySize is the default maximum request body size (1 MB).

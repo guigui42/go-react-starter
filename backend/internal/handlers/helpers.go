@@ -4,7 +4,7 @@ import (
 "net/http"
 "strconv"
 
-"github.com/example/go-react-starter/internal/middleware"
+"github.com/guigui42/go-react-starter/internal/middleware"
 )
 
 // getUserIDFromContext extracts the user ID from the request context.

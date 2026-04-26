@@ -1,7 +1,7 @@
 package migrations
 
 import (
-"github.com/example/go-react-starter/internal/models"
+"github.com/guigui42/go-react-starter/internal/models"
 "gorm.io/gorm"
 )
 

@@ -5,10 +5,10 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/example/go-react-starter/internal/middleware"
-	"github.com/example/go-react-starter/internal/models"
-	"github.com/example/go-react-starter/pkg/logger"
-	_ "github.com/example/go-react-starter/pkg/response" // imported for swagger type resolution
+	"github.com/guigui42/go-react-starter/internal/middleware"
+	"github.com/guigui42/go-react-starter/internal/models"
+	"github.com/guigui42/go-react-starter/pkg/logger"
+	_ "github.com/guigui42/go-react-starter/pkg/response" // imported for swagger type resolution
 	"github.com/rs/zerolog"
 )
 

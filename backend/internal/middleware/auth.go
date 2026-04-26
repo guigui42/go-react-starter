@@ -7,8 +7,8 @@ import (
 
 	"github.com/golang-jwt/jwt/v5"
 	"github.com/google/uuid"
-	"github.com/example/go-react-starter/internal/models"
-	"github.com/example/go-react-starter/pkg/response"
+	"github.com/guigui42/go-react-starter/internal/models"
+	"github.com/guigui42/go-react-starter/pkg/response"
 	"gorm.io/gorm"
 )
 

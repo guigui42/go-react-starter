@@ -1,4 +1,4 @@
-module github.com/example/go-react-starter
+module github.com/guigui42/go-react-starter
 
 go 1.26
 

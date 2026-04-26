@@ -5,8 +5,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/example/go-react-starter/pkg/logger"
-	"github.com/example/go-react-starter/pkg/response"
+	"github.com/guigui42/go-react-starter/pkg/logger"
+	"github.com/guigui42/go-react-starter/pkg/response"
 )
 
 // Maximum number of log entries that can be returned in a single request

@@ -9,11 +9,11 @@ import (
 	"strings"
 
 	"github.com/go-chi/chi/v5"
-	"github.com/example/go-react-starter/internal/config"
-	"github.com/example/go-react-starter/internal/middleware"
-	"github.com/example/go-react-starter/internal/models"
-	"github.com/example/go-react-starter/internal/services"
-	"github.com/example/go-react-starter/pkg/response"
+	"github.com/guigui42/go-react-starter/internal/config"
+	"github.com/guigui42/go-react-starter/internal/middleware"
+	"github.com/guigui42/go-react-starter/internal/models"
+	"github.com/guigui42/go-react-starter/internal/services"
+	"github.com/guigui42/go-react-starter/pkg/response"
 	"github.com/rs/zerolog"
 )
 

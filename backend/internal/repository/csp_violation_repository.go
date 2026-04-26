@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/example/go-react-starter/internal/models"
+	"github.com/guigui42/go-react-starter/internal/models"
 	"gorm.io/gorm"
 )
 

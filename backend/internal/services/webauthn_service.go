@@ -6,8 +6,8 @@ import (
 
 "github.com/go-webauthn/webauthn/protocol"
 "github.com/go-webauthn/webauthn/webauthn"
-"github.com/example/go-react-starter/internal/config"
-"github.com/example/go-react-starter/internal/models"
+"github.com/guigui42/go-react-starter/internal/config"
+"github.com/guigui42/go-react-starter/internal/models"
 )
 
 // WebAuthnService handles WebAuthn operations for passkey authentication

@@ -6,7 +6,7 @@ import (
 	"encoding/base64"
 	"net/http"
 
-	"github.com/example/go-react-starter/pkg/response"
+	"github.com/guigui42/go-react-starter/pkg/response"
 )
 
 const (

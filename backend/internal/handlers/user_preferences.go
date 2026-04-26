@@ -4,9 +4,9 @@ import (
 "encoding/json"
 "net/http"
 
-"github.com/example/go-react-starter/internal/middleware"
-"github.com/example/go-react-starter/internal/models"
-"github.com/example/go-react-starter/pkg/response"
+"github.com/guigui42/go-react-starter/internal/middleware"
+"github.com/guigui42/go-react-starter/internal/models"
+"github.com/guigui42/go-react-starter/pkg/response"
 "gorm.io/gorm"
 )
 

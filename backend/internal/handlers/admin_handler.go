@@ -6,9 +6,9 @@ import (
 "strconv"
 "time"
 
-"github.com/example/go-react-starter/internal/migrations"
-"github.com/example/go-react-starter/internal/services"
-"github.com/example/go-react-starter/pkg/response"
+"github.com/guigui42/go-react-starter/internal/migrations"
+"github.com/guigui42/go-react-starter/internal/services"
+"github.com/guigui42/go-react-starter/pkg/response"
 "github.com/google/uuid"
 "gorm.io/gorm"
 )

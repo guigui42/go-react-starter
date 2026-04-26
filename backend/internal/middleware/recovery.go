@@ -6,7 +6,7 @@ import (
 	"os"
 	"runtime/debug"
 
-	"github.com/example/go-react-starter/pkg/response"
+	"github.com/guigui42/go-react-starter/pkg/response"
 )
 
 // RecoveryMiddleware recovers from panics and returns a JSON error response.

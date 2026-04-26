@@ -5,8 +5,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/example/go-react-starter/internal/models"
-	"github.com/example/go-react-starter/pkg/logger"
+	"github.com/guigui42/go-react-starter/internal/models"
+	"github.com/guigui42/go-react-starter/pkg/logger"
 	"gorm.io/gorm"
 	"gorm.io/gorm/clause"
 )
