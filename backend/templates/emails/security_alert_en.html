@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Alert - Go React Starter</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .logo h1 {
+            color: #228be6;
+            margin: 0;
+            font-size: 28px;
+        }
+        h2 {
+            color: #333;
+            margin-top: 0;
+        }
+        .alert-box {
+            background-color: #fff3cd;
+            border: 1px solid #ffc107;
+            border-radius: 6px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .alert-box.danger {
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+        }
+        .detail-row {
+            display: flex;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+        }
+        .detail-label {
+            font-weight: 600;
+            min-width: 120px;
+            color: #666;
+        }
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            font-size: 14px;
+            color: #666;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <h1>Go React Starter</h1>
+        </div>
+
+        <h2>🔒 Security Alert</h2>
+        
+        <div class="alert-box">
+            <p><strong>{{.AlertTitle}}</strong></p>
+            <p>{{.AlertMessage}}</p>
+        </div>
+        
+        {{if .Details}}
+        <h3>Details</h3>
+        {{range $key, $value := .Details}}
+        <div class="detail-row">
+            <span class="detail-label">{{$key}}:</span>
+            <span>{{$value}}</span>
+        </div>
+        {{end}}
+        {{end}}
+        
+        <p>If this was you, no action is needed. If you did not perform this action, please secure your account immediately by changing your password or contacting support.</p>
+        
+        <div class="footer">
+            <p>© {{.Year}} Go React Starter. All rights reserved.</p>
+            <p>This is an automated security notification.</p>
+        </div>
+    </div>
+</body>
+</html>

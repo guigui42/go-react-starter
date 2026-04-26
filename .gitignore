@@ -27,7 +27,7 @@ node_modules/
 # Coverage
 coverage/
 *.out
-*.html
+coverage.html
 
 # Logs
 *.log
