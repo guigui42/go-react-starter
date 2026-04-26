@@ -47,5 +47,3 @@ jobs:
           file: docker/Dockerfile
           push: true
           tags: ${{ steps.tags.outputs.tags }}
-          cache-from: type=gha,scope=docker-${{ hashFiles('backend/go.sum', 'frontend/package-lock.json') }}
-          cache-to: type=gha,mode=max,scope=docker-${{ hashFiles('backend/go.sum', 'frontend/package-lock.json') }}

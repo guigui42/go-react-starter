@@ -16,9 +16,6 @@ coverage.html
 /examples/config/config
 /examples/database/database
 /examples/logging/logging
-config
-database
-logging
 
 # Test binary, built with `go test -c`
 *.test
